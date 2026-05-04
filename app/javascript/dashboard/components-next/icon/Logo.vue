@@ -1,0 +1,37 @@
+<script setup>
+import { useAttrs } from 'vue';
+import { useMapGetter } from 'dashboard/composables/store';
+
+const attrs = useAttrs();
+const globalConfig = useMapGetter('globalConfig/get');
+</script>
+
+<template>
+  <img
+    v-if="globalConfig.logoThumbnail"
+    v-bind="attrs"
+    :src="globalConfig.logoThumbnail"
+  />
+  <svg
+    v-else
+    v-once
+    v-bind="attrs"
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clip-path="url(#fillnode-logo-clip)">
+      <path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="#0D9488"/>
+      <path d="M4.5 5H6.5V11H4.5V5Z" fill="white"/>
+      <path d="M7 5H9V11H7V5Z" fill="white"/>
+      <path d="M9.5 5H11.5V8H9.5V5Z" fill="white"/>
+    </g>
+    <defs>
+      <clipPath id="fillnode-logo-clip">
+        <rect width="16" height="16" fill="white"/>
+      </clipPath>
+    </defs>
+  </svg>
+</template>

@@ -1,0 +1,7 @@
+<svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="8" fill="#14B8A6"/>
+  <path d="M8 10H14V22H8V10Z" fill="white"/>
+  <path d="M15 10H21V22H15V10Z" fill="white"/>
+  <path d="M22 10H28V16H22V10Z" fill="white"/>
+  <text x="40" y="23" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="#F1F5F9">FillNode</text>
+</svg>
