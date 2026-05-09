@@ -54,7 +54,7 @@ export default {
       return this.inbox.provider_config?.source === 'embedded_signup';
     },
     whatsappAppId() {
-      return window.chatwootConfig?.whatsappAppId;
+      return window.fillnodeConfig?.whatsappAppId;
     },
     isForwardingEnabled() {
       return !!this.inbox.forwarding_enabled;
@@ -275,7 +275,7 @@ export default {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.chatwoot.com/docs/product/channels/live-chat/sdk/identity-validation/"
+              href="#"
               class="text-n-blue-11 hover:underline text-label-small"
             >
               {{

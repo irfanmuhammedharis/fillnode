@@ -16,7 +16,7 @@
     "CREATE_FLOW": {
       "CHANNEL": {
         "TITLE": "არხის არჩევა",
-        "BODY": "აირჩიეთ პროვაიდერი, რომლის ინტეგრაციაც გსურთ Chatwoot-თან."
+        "BODY": "აირჩიეთ პროვაიდერი, რომლის ინტეგრაციაც გსურთ Fillnode-თან."
       },
       "INBOX": {
         "TITLE": "შექმენით ინბოქსი",
@@ -42,7 +42,7 @@
         "PLACEHOLDER": "შეიყვანეთ თქვენი ვებგვერდის სახელი (მაგ: Acme Inc)"
       },
       "FB": {
-        "HELP": "PS: შესვლისას, ჩვენ მხოლოდ თქვენს გვერდის შეტყობინებებზე გვაქვს წვდომა. თქვენი პირადი შეტყობინებები არასოდეს იქნება ხელმისაწვდომი Chatwoot-ისთვის.",
+        "HELP": "PS: შესვლისას, ჩვენ მხოლოდ თქვენს გვერდის შეტყობინებებზე გვაქვს წვდომა. თქვენი პირადი შეტყობინებები არასოდეს იქნება ხელმისაწვდომი Fillnode-ისთვის.",
         "CHOOSE_PAGE": "აირჩიეთ გვერდი",
         "CHOOSE_PLACEHOLDER": "აირჩიეთ გვერდი სიიდან",
         "INBOX_NAME": "ინბოქსის სახელი",
@@ -449,7 +449,7 @@
       },
       "AUTH": {
         "TITLE": "არჩევა არხი",
-        "DESC": "Chatwoot supports live-chat widgets, Facebook Messenger, Twitter profiles, WhatsApp, Emails, etc., as channels. If you want to build a custom channel, you can create it using the API channel. To get started, choose one of the channels below.",
+        "DESC": "Fillnode supports live-chat widgets, Facebook Messenger, Twitter profiles, WhatsApp, Emails, etc., as channels. If you want to build a custom channel, you can create it using the API channel. To get started, choose one of the channels below.",
         "TITLE_NEXT": "დაასრულეთ კონფიგურაცია",
         "TITLE_FINISH": "აი, მზადაა!",
         "CHANNEL": {
@@ -507,11 +507,11 @@
       },
       "DETAILS": {
         "TITLE": "ინბოქსის დეტალები",
-        "DESC": "ქვემოთ მოცემული ჩამოსაშლელი სიიდან აირჩიეთ Facebook გვერდი, რომელსაც გსურთ დაუკავშირდეთ Chatwoot-ს. ასევე შეგიძლიათ მიანიჭოთ ინბოქსს საკუთარი სახელი უკეთესი იდენტიფიკაციისთვის."
+        "DESC": "ქვემოთ მოცემული ჩამოსაშლელი სიიდან აირჩიეთ Facebook გვერდი, რომელსაც გსურთ დაუკავშირდეთ Fillnode-ს. ასევე შეგიძლიათ მიანიჭოთ ინბოქსს საკუთარი სახელი უკეთესი იდენტიფიკაციისთვის."
       },
       "FINISH": {
         "TITLE": "შესანიშნავად გააკეთე!",
-        "DESC": "თქვენ წარმატებით დაასრულეთ თქვენი Facebook გვერდის ინტეგრაცია Chatwoot-თან. შემდეგ ჯერზე, როდესაც მომხმარებელი მოგწერთ თქვენს გვერდს, საუბარი ავტომატურად გამოჩნდება თქვენს ინბოქსში.<br>ჩვენ ასევე გთავაზობთ ვიჯეტის სკრიპტს, რომელსაც მარტივად შეგიძლიათ დაამატოთ თქვენს ვებსაიტზე. როდესაც ეს ვებსაიტზე ჩართული იქნება, მომხმარებლებს შეეძლებათ მოგწერონ პირდაპირ თქვენი ვებსაიტიდან, გარეგანი ხელსაწყოს გარეშე და საუბარი გამოჩნდება აქვე, Chatwoot-ში.<br>საოცარია, არა? ჩვენ ნამდვილად ვცდილობთ :)"
+        "DESC": "თქვენ წარმატებით დაასრულეთ თქვენი Facebook გვერდის ინტეგრაცია Fillnode-თან. შემდეგ ჯერზე, როდესაც მომხმარებელი მოგწერთ თქვენს გვერდს, საუბარი ავტომატურად გამოჩნდება თქვენს ინბოქსში.<br>ჩვენ ასევე გთავაზობთ ვიჯეტის სკრიპტს, რომელსაც მარტივად შეგიძლიათ დაამატოთ თქვენს ვებსაიტზე. როდესაც ეს ვებსაიტზე ჩართული იქნება, მომხმარებლებს შეეძლებათ მოგწერონ პირდაპირ თქვენი ვებსაიტიდან, გარეგანი ხელსაწყოს გარეშე და საუბარი გამოჩნდება აქვე, Fillnode-ში.<br>საოცარია, არა? ჩვენ ნამდვილად ვცდილობთ :)"
       },
       "EMAIL_PROVIDER": {
         "TITLE": "Select your email provider",
@@ -1123,8 +1123,8 @@
         "USER_MESSAGE": "გამარჯობა",
         "AGENT_MESSAGE": "სალამი"
       },
-      "BRANDING_TEXT": "მოძრავებულია Chatwoot-ის მიერ",
-      "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
+      "BRANDING_TEXT": "მოძრავებულია Fillnode-ის მიერ",
+      "SCRIPT_SETTINGS": "\n      window.fillnodeSettings = {options};"
     },
     "EMAIL_PROVIDERS": {
       "MICROSOFT": {

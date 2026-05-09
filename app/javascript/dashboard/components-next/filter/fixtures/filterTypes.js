@@ -567,7 +567,7 @@ export const sampleActiveFilters = [
   {
     attributeKey: 'email',
     filterOperator: 'does_not_contain',
-    values: 'test@chatwoot.com',
+    values: 'test@fillnode.com',
     queryOperator: 'or',
   },
   {

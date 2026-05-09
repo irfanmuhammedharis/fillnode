@@ -7,7 +7,7 @@ Sidekiq.configure_client do |config|
 end
 
 # Logs whenever a job is pulled off Redis for execution.
-class ChatwootDequeuedLogger
+class FillnodeDequeuedLogger
   def call(_worker, job, queue)
     payload = job['args'].first
     Sidekiq.logger.info("Dequeued #{job['wrapped']} #{payload['job_id']} from #{queue}")
@@ -20,7 +20,7 @@ Sidekiq.configure_server do |config|
 
   if ActiveModel::Type::Boolean.new.cast(ENV.fetch('ENABLE_SIDEKIQ_DEQUEUE_LOGGER', false))
     config.server_middleware do |chain|
-      chain.add ChatwootDequeuedLogger
+      chain.add FillnodeDequeuedLogger
     end
   end
 
@@ -43,7 +43,7 @@ Rails.application.reloader.to_prepare do
     # Merge enterprise-only cron entries when running an enterprise build.
     # Mirrors the conditional-load pattern already used for enterprise initializers.
     enterprise_schedule_file = Rails.root.join('enterprise/config/schedule.yml')
-    schedule.merge!(YAML.load_file(enterprise_schedule_file)) if ChatwootApp.enterprise? && enterprise_schedule_file.exist?
+    schedule.merge!(YAML.load_file(enterprise_schedule_file)) if FillnodeApp.enterprise? && enterprise_schedule_file.exist?
 
     # Cron entries removed from schedule.yml but possibly still in Redis
     # with source:'dynamic' (predating the source tag). load_from_hash!

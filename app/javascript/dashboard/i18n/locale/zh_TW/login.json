@@ -1,6 +1,6 @@
 {
   "LOGIN": {
-    "TITLE": "登入 Chatwoot",
+    "TITLE": "登入 Fillnode",
     "EMAIL": {
       "LABEL": "電子郵件",
       "PLACEHOLDER": "example{'@'}companyname.com",

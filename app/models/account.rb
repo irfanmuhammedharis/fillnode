@@ -144,8 +144,8 @@ class Account < ApplicationRecord
 
   def usage_limits
     {
-      agents: ChatwootApp.max_limit.to_i,
-      inboxes: ChatwootApp.max_limit.to_i
+      agents: FillnodeApp.max_limit.to_i,
+      inboxes: FillnodeApp.max_limit.to_i
     }
   end
 

@@ -16,7 +16,7 @@
     "CREATE_FLOW": {
       "CHANNEL": {
         "TITLE": "Triar canal",
-        "BODY": "Trieu el proveïdor que vulgueu integrar amb Chatwoot."
+        "BODY": "Trieu el proveïdor que vulgueu integrar amb Fillnode."
       },
       "INBOX": {
         "TITLE": "Crear safata d'entrada",
@@ -42,7 +42,7 @@
         "PLACEHOLDER": "Introdueix el nom del vostre lloc web (per exemple: Acme Inc)"
       },
       "FB": {
-        "HELP": "PD: Al iniciar la sessió, només accediu als missatges de la vostra pàgina. Chatwoot mai no podrà accedir als vostres missatges privats.",
+        "HELP": "PD: Al iniciar la sessió, només accediu als missatges de la vostra pàgina. Fillnode mai no podrà accedir als vostres missatges privats.",
         "CHOOSE_PAGE": "Trieu la pàgina",
         "CHOOSE_PLACEHOLDER": "Selecciona una pàgina de la llista",
         "INBOX_NAME": "Nom de la safata d'entrada",
@@ -449,7 +449,7 @@
       },
       "AUTH": {
         "TITLE": "Escull un canal",
-        "DESC": "Chatwoot admet widgets de xat en directe, Facebook Messenger, WhatsApp, correus electrònics, etc., com a canals. Si voleu crear un canal personalitzat, podeu crear-lo mitjançant el canal API. Per començar, tria un dels canals següents.",
+        "DESC": "Fillnode admet widgets de xat en directe, Facebook Messenger, WhatsApp, correus electrònics, etc., com a canals. Si voleu crear un canal personalitzat, podeu crear-lo mitjançant el canal API. Per començar, tria un dels canals següents.",
         "TITLE_NEXT": "Complete the setup",
         "TITLE_FINISH": "Voilà!",
         "CHANNEL": {
@@ -507,11 +507,11 @@
       },
       "DETAILS": {
         "TITLE": "Detalls de la safata d'entrada",
-        "DESC": "Des del següent menú desplegable, seleccioneu la pàgina de Facebook que voleu connectar a Chatwoot. També podeu donar un nom personalitzat a la safata d'entrada per a una millor identificació."
+        "DESC": "Des del següent menú desplegable, seleccioneu la pàgina de Facebook que voleu connectar a Fillnode. També podeu donar un nom personalitzat a la safata d'entrada per a una millor identificació."
       },
       "FINISH": {
         "TITLE": "L'has clavat!",
-        "DESC": "Heu acabat d'integrar la vostra pàgina de Facebook amb Chatwoot. La propera vegada que un client escrigui un missatge a la vostra pàgina, la conversa apareixerà automàticament a la safata d'entrada. <br>També us proporcionem un script del widget que podeu afegir fàcilment al vostre web. Una vegada que estigui operatiu al vostre web, els clients us podran enviar missatges des del web sense l’ajuda de cap eina externa i la conversa apareixerà aquí mateix, a Chatwoot. <br>Genial, eh? Bé, segur que intentem ser-ho :)"
+        "DESC": "Heu acabat d'integrar la vostra pàgina de Facebook amb Fillnode. La propera vegada que un client escrigui un missatge a la vostra pàgina, la conversa apareixerà automàticament a la safata d'entrada. <br>També us proporcionem un script del widget que podeu afegir fàcilment al vostre web. Una vegada que estigui operatiu al vostre web, els clients us podran enviar missatges des del web sense l’ajuda de cap eina externa i la conversa apareixerà aquí mateix, a Fillnode. <br>Genial, eh? Bé, segur que intentem ser-ho :)"
       },
       "EMAIL_PROVIDER": {
         "TITLE": "Selecciona el teu proveïdor de correu electrònic",
@@ -1123,8 +1123,8 @@
         "USER_MESSAGE": "Hola",
         "AGENT_MESSAGE": "Hola"
       },
-      "BRANDING_TEXT": "Desenvolupat per Chatwoot",
-      "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
+      "BRANDING_TEXT": "Desenvolupat per Fillnode",
+      "SCRIPT_SETTINGS": "\n      window.fillnodeSettings = {options};"
     },
     "EMAIL_PROVIDERS": {
       "MICROSOFT": {

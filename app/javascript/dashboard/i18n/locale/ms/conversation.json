@@ -261,7 +261,7 @@
     "SENT_BY": "Dihantar oleh:",
     "BOT": "Bot",
     "NATIVE_APP": "Aplikasi asli",
-    "NATIVE_APP_ADVISORY": "Mesej ini dihantar dari aplikasi asli. Balas dari Chatwoot untuk mengekalkan tetingkap mesej.",
+    "NATIVE_APP_ADVISORY": "Mesej ini dihantar dari aplikasi asli. Balas dari Fillnode untuk mengekalkan tetingkap mesej.",
     "SEND_FAILED": "Tidak dapat menghantar mesej! Sila cuba lagi",
     "TRY_AGAIN": "cuba lagi",
     "ASSIGNMENT": {

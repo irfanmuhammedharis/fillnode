@@ -13,7 +13,7 @@
 %>
 <script>
 
-window.chatwootSettings = {
+window.fillnodeSettings = {
   hideMessageBubble: false,
   // showUnreadMessagesDialog: false,
   // baseDomain: '.loca.lt',
@@ -33,17 +33,17 @@ window.chatwootSettings = {
   g.async = true;
   s.parentNode.insertBefore(g,s);
   g.onload=function(){
-    window.chatwootSDK.run({
+    window.fillnodeSDK.run({
       websiteToken: '<%= @web_widget.website_token %>',
       baseUrl: BASE_URL
     })
   }
 })(document,"script");
 
-window.addEventListener('chatwoot:ready', function() {
-  console.log('chatwoot:ready', window.$chatwoot);
+window.addEventListener('fillnode:ready', function() {
+  console.log('fillnode:ready', window.$fillnode);
   if (window.location.search.includes('setUser')) {
-    window.$chatwoot.setUser('<%= user_id %>', {
+    window.$fillnode.setUser('<%= user_id %>', {
       identifier_hash: '<%= user_hash %>',
       email: 'jane@example.com',
       name: 'Jane Doe',
@@ -52,28 +52,28 @@ window.addEventListener('chatwoot:ready', function() {
   }
 })
 
-window.addEventListener('chatwoot:error', function(e) {
-  console.log('chatwoot:error', e.detail)
+window.addEventListener('fillnode:error', function(e) {
+  console.log('fillnode:error', e.detail)
 })
 
 
-window.addEventListener('chatwoot:on-message', function(e) {
-  console.log('chatwoot:on-message', e.detail)
+window.addEventListener('fillnode:on-message', function(e) {
+  console.log('fillnode:on-message', e.detail)
 })
 
-window.addEventListener('chatwoot:postback', function(e) {
-  console.log('chatwoot:postback', e.detail)
+window.addEventListener('fillnode:postback', function(e) {
+  console.log('fillnode:postback', e.detail)
 })
 
-window.addEventListener('chatwoot:opened', function() {
-  console.log('chatwoot:opened')
+window.addEventListener('fillnode:opened', function() {
+  console.log('fillnode:opened')
 })
 
-window.addEventListener('chatwoot:closed', function() {
-  console.log('chatwoot:closed')
+window.addEventListener('fillnode:closed', function() {
+  console.log('fillnode:closed')
 })
 
-window.addEventListener('chatwoot:on-start-conversation', function(e) {
-  console.log('chatwoot:on-start-conversation', e.detail)
+window.addEventListener('fillnode:on-start-conversation', function(e) {
+  console.log('fillnode:on-start-conversation', e.detail)
 })
 </script>

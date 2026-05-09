@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue';
-import { fileNameWithEllipsis } from '@chatwoot/utils';
+import { fileNameWithEllipsis } from '@fillnode/utils';
 
 import Button from 'dashboard/components-next/button/Button.vue';
 

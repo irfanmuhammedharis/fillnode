@@ -7,8 +7,8 @@ export default {
       // omniauth has a standing issue on redirecting the post request
       // https://github.com/lynndylanhurley/devise_token_auth/issues/1466
       const baseUrl = 'https://accounts.google.com/o/oauth2/auth';
-      const clientId = window.chatwootConfig.googleOAuthClientId;
-      const redirectUri = window.chatwootConfig.googleOAuthCallbackUrl;
+      const clientId = window.fillnodeConfig.googleOAuthClientId;
+      const redirectUri = window.fillnodeConfig.googleOAuthCallbackUrl;
       const responseType = 'code';
       const scope = 'email profile';
 

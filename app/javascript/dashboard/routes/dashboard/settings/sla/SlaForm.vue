@@ -1,6 +1,6 @@
 <script>
 import { mapGetters } from 'vuex';
-import { convertSecondsToTimeUnit } from '@chatwoot/utils';
+import { convertSecondsToTimeUnit } from '@fillnode/utils';
 import validations from './validations';
 import SlaTimeInput from './SlaTimeInput.vue';
 import NextButton from 'dashboard/components-next/button/Button.vue';

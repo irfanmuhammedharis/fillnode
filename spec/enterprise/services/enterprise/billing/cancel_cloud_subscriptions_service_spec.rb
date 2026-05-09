@@ -9,7 +9,7 @@ RSpec.describe Enterprise::Billing::CancelCloudSubscriptionsService do
   describe '#perform' do
     context 'when deployment is not cloud' do
       it 'does not call stripe subscriptions api' do
-        allow(ChatwootApp).to receive(:chatwoot_cloud?).and_return(false)
+        allow(FillnodeApp).to receive(:fillnode_cloud?).and_return(false)
         allow(Stripe::Subscription).to receive(:list)
 
         service.perform
@@ -22,7 +22,7 @@ RSpec.describe Enterprise::Billing::CancelCloudSubscriptionsService do
       let(:custom_attributes) { {} }
 
       it 'does not call stripe subscriptions api' do
-        allow(ChatwootApp).to receive(:chatwoot_cloud?).and_return(true)
+        allow(FillnodeApp).to receive(:fillnode_cloud?).and_return(true)
         allow(Stripe::Subscription).to receive(:list)
 
         service.perform
@@ -37,7 +37,7 @@ RSpec.describe Enterprise::Billing::CancelCloudSubscriptionsService do
       let(:sub_2) { instance_double(Stripe::Subscription, id: 'sub_2', cancel_at_period_end: true) }
 
       it 'marks only active subscriptions that are not yet set to cancel at period end' do
-        allow(ChatwootApp).to receive(:chatwoot_cloud?).and_return(true)
+        allow(FillnodeApp).to receive(:fillnode_cloud?).and_return(true)
         allow(Stripe::Subscription).to receive(:list).and_return(subscription_response)
         allow(Stripe::Subscription).to receive(:update)
 

@@ -3,7 +3,7 @@ import { computed, reactive, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { required, email } from '@vuelidate/validators';
 import { useVuelidate } from '@vuelidate/core';
-import { splitName } from '@chatwoot/utils';
+import { splitName } from '@fillnode/utils';
 import countries from 'shared/constants/countries.js';
 import Input from 'dashboard/components-next/input/Input.vue';
 import ComboBox from 'dashboard/components-next/combobox/ComboBox.vue';

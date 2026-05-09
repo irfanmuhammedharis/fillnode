@@ -1,7 +1,7 @@
 <script setup>
 import { computed, useTemplateRef, ref, onMounted } from 'vue';
 import { Letter } from 'vue-letter';
-import { sanitizeTextForRender } from '@chatwoot/utils';
+import { sanitizeTextForRender } from '@fillnode/utils';
 import { allowedCssProperties } from 'lettersanitizer';
 
 import Icon from 'next/icon/Icon.vue';

@@ -7,7 +7,7 @@ import { useStoreGetters } from 'dashboard/composables/store';
 import { useKeyboardEvents } from 'dashboard/composables/useKeyboardEvents';
 import { useImageZoom } from 'dashboard/composables/useImageZoom';
 import { messageTimestamp } from 'shared/helpers/timeHelper';
-import { downloadFile } from '@chatwoot/utils';
+import { downloadFile } from '@fillnode/utils';
 
 import NextButton from 'dashboard/components-next/button/Button.vue';
 import Avatar from 'next/avatar/Avatar.vue';

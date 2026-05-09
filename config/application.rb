@@ -33,24 +33,13 @@ if ENV.fetch('JUDOSCALE_URL', false).present?
   require 'judoscale-sidekiq'
 end
 
-module Chatwoot
+module Fillnode
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
     config.rails_i18n.enabled_modules = [:pluralization]
 
     config.eager_load_paths << Rails.root.join('lib')
-    config.eager_load_paths << Rails.root.join('enterprise/lib')
-    config.eager_load_paths << Rails.root.join('enterprise/listeners')
-    # rubocop:disable Rails/FilePath
-    config.eager_load_paths += Dir["#{Rails.root}/enterprise/app/**"]
-    # rubocop:enable Rails/FilePath
-    # Add enterprise views to the view paths
-    config.paths['app/views'].unshift('enterprise/app/views')
-
-    # Load enterprise initializers alongside standard initializers
-    enterprise_initializers = Rails.root.join('enterprise/config/initializers')
-    Dir[enterprise_initializers.join('**/*.rb')].each { |f| require f } if enterprise_initializers.exist?
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
@@ -59,7 +48,7 @@ module Chatwoot
     config.generators.javascripts = false
     config.generators.stylesheets = false
 
-    # Custom chatwoot configurations
+    # Custom fillnode configurations
     config.x = config_for(:app).with_indifferent_access
 
     # https://stackoverflow.com/questions/72970170/upgrading-to-rails-6-1-6-1-causes-psychdisallowedclass-tried-to-load-unspecif
@@ -91,7 +80,7 @@ module Chatwoot
 
   def self.redis_ssl_verify_mode
     # Introduced this method to fix the issue in heroku where redis connections fail for redis 6
-    # ref: https://github.com/chatwoot/chatwoot/issues/2420
+    # ref: https://github.com/fillnode/fillnode/issues/2420
     #
     # unless the redis verify mode is explicitly specified as none, we will fall back to the default 'verify peer'
     # ref: https://www.rubydoc.info/stdlib/openssl/OpenSSL/SSL/SSLContext#DEFAULT_PARAMS-constant

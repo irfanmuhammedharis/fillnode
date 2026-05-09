@@ -16,7 +16,7 @@
     "CREATE_FLOW": {
       "CHANNEL": {
         "TITLE": "Odaberite kanal",
-        "BODY": "Odaberite davatelja kojeg želite integrirati s Chatwoot."
+        "BODY": "Odaberite davatelja kojeg želite integrirati s Fillnode."
       },
       "INBOX": {
         "TITLE": "Create Inbox",
@@ -42,7 +42,7 @@
         "PLACEHOLDER": "Enter your website name (eg: Acme Inc)"
       },
       "FB": {
-        "HELP": "PS: Prijavom dobivamo pristup samo porukama vaše stranice. Vaše privatne poruke Chatwoot nikada neće moći pristupiti.",
+        "HELP": "PS: Prijavom dobivamo pristup samo porukama vaše stranice. Vaše privatne poruke Fillnode nikada neće moći pristupiti.",
         "CHOOSE_PAGE": "Odaberite stranicu",
         "CHOOSE_PLACEHOLDER": "Odaberite stranicu s popisa",
         "INBOX_NAME": "Naziv sandučića",
@@ -449,7 +449,7 @@
       },
       "AUTH": {
         "TITLE": "Odaberite kanal",
-        "DESC": "Chatwoot supports live-chat widgets, Facebook Messenger, Twitter profiles, WhatsApp, Emails, etc., as channels. If you want to build a custom channel, you can create it using the API channel. To get started, choose one of the channels below.",
+        "DESC": "Fillnode supports live-chat widgets, Facebook Messenger, Twitter profiles, WhatsApp, Emails, etc., as channels. If you want to build a custom channel, you can create it using the API channel. To get started, choose one of the channels below.",
         "TITLE_NEXT": "Dovrši postavljanje",
         "TITLE_FINISH": "Eto!",
         "CHANNEL": {
@@ -507,11 +507,11 @@
       },
       "DETAILS": {
         "TITLE": "Detalji sandučića",
-        "DESC": "From the dropdown below, select the Facebook Page you want to connect to Chatwoot. You can also give a custom name to your inbox for better identification."
+        "DESC": "From the dropdown below, select the Facebook Page you want to connect to Fillnode. You can also give a custom name to your inbox for better identification."
       },
       "FINISH": {
         "TITLE": "Uspjelo je!",
-        "DESC": "You have successfully finished integrating your Facebook Page with Chatwoot. Next time a customer messages your Page, the conversation will automatically appear on your inbox.<br>We are also providing you with a widget script that you can easily add to your website. Once this is live on your website, customers can message you right from your website without the help of any external tool and the conversation will appear right here, on Chatwoot.<br>Cool, huh? Well, we sure try to be :)"
+        "DESC": "You have successfully finished integrating your Facebook Page with Fillnode. Next time a customer messages your Page, the conversation will automatically appear on your inbox.<br>We are also providing you with a widget script that you can easily add to your website. Once this is live on your website, customers can message you right from your website without the help of any external tool and the conversation will appear right here, on Fillnode.<br>Cool, huh? Well, we sure try to be :)"
       },
       "EMAIL_PROVIDER": {
         "TITLE": "Odaberite svog davatelja e-pošte",
@@ -1123,8 +1123,8 @@
         "USER_MESSAGE": "Bok",
         "AGENT_MESSAGE": "Bok"
       },
-      "BRANDING_TEXT": "Powered by Chatwoot",
-      "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
+      "BRANDING_TEXT": "Powered by Fillnode",
+      "SCRIPT_SETTINGS": "\n      window.fillnodeSettings = {options};"
     },
     "EMAIL_PROVIDERS": {
       "MICROSOFT": {

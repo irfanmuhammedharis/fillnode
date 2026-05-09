@@ -3,28 +3,28 @@
 
 ___
 
-# Chatwoot
+# FillNode
 
-The modern customer support platform, an open-source alternative to Intercom, Zendesk, Salesforce Service Cloud etc.
+A modern customer engagement platform.
 
 <p>
-  <img src="https://img.shields.io/circleci/build/github/chatwoot/chatwoot" alt="CircleCI Badge">
-    <a href="https://hub.docker.com/r/chatwoot/chatwoot/"><img src="https://img.shields.io/docker/pulls/chatwoot/chatwoot" alt="Docker Pull Badge"></a>
-  <a href="https://hub.docker.com/r/chatwoot/chatwoot/"><img src="https://img.shields.io/docker/cloud/build/chatwoot/chatwoot" alt="Docker Build Badge"></a>
-  <img src="https://img.shields.io/github/commit-activity/m/chatwoot/chatwoot" alt="Commits-per-month">
-  <a title="Crowdin" target="_self" href="https://chatwoot.crowdin.com/chatwoot"><img src="https://badges.crowdin.net/e/37ced7eba411064bd792feb3b7a28b16/localized.svg"></a>
+  <img src="https://img.shields.io/circleci/build/github/fillnode/fillnode" alt="CircleCI Badge">
+    <a href="https://hub.docker.com/r/fillnode/fillnode/"><img src="https://img.shields.io/docker/pulls/fillnode/fillnode" alt="Docker Pull Badge"></a>
+  <a href="https://hub.docker.com/r/fillnode/fillnode/"><img src="https://img.shields.io/docker/cloud/build/fillnode/fillnode" alt="Docker Build Badge"></a>
+  <img src="https://img.shields.io/github/commit-activity/m/fillnode/fillnode" alt="Commits-per-month">
+  <a title="Crowdin" target="_self" href="https://fillnode.crowdin.com/fillnode"><img src="https://badges.crowdin.net/e/37ced7eba411064bd792feb3b7a28b16/localized.svg"></a>
   <a href="https://discord.gg/cJXdrwS"><img src="https://img.shields.io/discord/647412545203994635" alt="Discord"></a>
-  <a href="https://status.chatwoot.com"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchatwoot%2Fstatus%2Fmaster%2Fapi%2Fchatwoot%2Fuptime.json" alt="uptime"></a>
-  <a href="https://status.chatwoot.com"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchatwoot%2Fstatus%2Fmaster%2Fapi%2Fchatwoot%2Fresponse-time.json" alt="response time"></a>
-  <a href="https://artifacthub.io/packages/helm/chatwoot/chatwoot"><img src="https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/artifact-hub" alt="Artifact HUB"></a>
+  <a href="https://status.fillnode.com"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Ffillnode%2Fstatus%2Fmaster%2Fapi%2Ffillnode%2Fuptime.json" alt="uptime"></a>
+  <a href="https://status.fillnode.com"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Ffillnode%2Fstatus%2Fmaster%2Fapi%2Ffillnode%2Fresponse-time.json" alt="response time"></a>
+  <a href="https://artifacthub.io/packages/helm/fillnode/fillnode"><img src="https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/artifact-hub" alt="Artifact HUB"></a>
 </p>
 
 
 <p>
-  <a href="https://heroku.com/deploy?template=https://github.com/chatwoot/chatwoot/tree/master" alt="Deploy to Heroku">
+  <a href="https://heroku.com/deploy?template=https://github.com/fillnode/fillnode/tree/master" alt="Deploy to Heroku">
      <img width="150" alt="Deploy" src="https://www.herokucdn.com/deploy/button.svg"/>
   </a>
-  <a href="https://marketplace.digitalocean.com/apps/chatwoot?refcode=f2238426a2a8" alt="Deploy to DigitalOcean">
+  <a href="https://marketplace.digitalocean.com/apps/fillnode?refcode=f2238426a2a8" alt="Deploy to DigitalOcean">
      <img width="200" alt="Deploy to DO" src="https://www.deploytodo.com/do-btn-blue.svg"/>
   </a>
 </p>
@@ -34,15 +34,15 @@ The modern customer support platform, an open-source alternative to Intercom, Ze
 
 ---
 
-Chatwoot is the modern, open-source, and self-hosted customer support platform designed to help businesses deliver exceptional customer support experience. Built for scale and flexibility, Chatwoot gives you full control over your customer data while providing powerful tools to manage conversations across channels.
+Fillnode is the modern, open-source, and self-hosted customer support platform designed to help businesses deliver exceptional customer support experience. Built for scale and flexibility, Fillnode gives you full control over your customer data while providing powerful tools to manage conversations across channels.
 
 ### ✨ Captain – AI Agent for Support
 
-Supercharge your support with Captain, Chatwoot’s AI agent. Captain helps automate responses, handle common queries, and reduce agent workload—ensuring customers get instant, accurate answers. With Captain, your team can focus on complex conversations while routine questions are resolved automatically. Read more about Captain [here](https://chwt.app/captain-docs).
+Supercharge your support with Captain, Fillnode’s AI agent. Captain helps automate responses, handle common queries, and reduce agent workload—ensuring customers get instant, accurate answers. With Captain, your team can focus on complex conversations while routine questions are resolved automatically. Read more about Captain [here](https://chwt.app/captain-docs).
 
 ### 💬 Omnichannel Support Desk
 
-Chatwoot centralizes all customer conversations into one powerful inbox, no matter where your customers reach out from. It supports live chat on your website, email, Facebook, Instagram, Twitter, WhatsApp, Telegram, Line, SMS etc.
+Fillnode centralizes all customer conversations into one powerful inbox, no matter where your customers reach out from. It supports live chat on your website, email, Facebook, Instagram, Twitter, WhatsApp, Telegram, Line, SMS etc.
 
 ### 📚 Help center portal
 
@@ -73,10 +73,10 @@ Publish help articles, FAQs, and guides through the built-in Help Center Portal.
 #### Integrations
 - Slack Integration to manage conversations directly from Slack.
 - Dialogflow Integration for chatbot automation.
-- Dashboard Apps to embed internal tools within Chatwoot.
-- Shopify Integration to view and manage customer orders right within Chatwoot.
+- Dashboard Apps to embed internal tools within Fillnode.
+- Shopify Integration to view and manage customer orders right within Fillnode.
 - Use Google Translate to translate messages from your customers in realtime.
-- Create and manage Linear tickets within Chatwoot.
+- Create and manage Linear tickets within Fillnode.
 
 #### Reports & Insights
 - Live View of ongoing conversations for real-time monitoring.
@@ -87,11 +87,11 @@ Publish help articles, FAQs, and guides through the built-in Help Center Portal.
 
 ## Documentation
 
-Detailed documentation is available at [chatwoot.com/help-center](https://www.chatwoot.com/help-center).
+Detailed documentation is available at [fillnode.com/help-center](https://www.fillnode.com/help-center).
 
 ## Translation process
 
-The translation process for Chatwoot web and mobile app is managed at [https://translate.chatwoot.com](https://translate.chatwoot.com) using Crowdin. Please read the [translation guide](https://www.chatwoot.com/docs/contributing/translating-chatwoot-to-your-language) for contributing to Chatwoot.
+The translation process for Fillnode web and mobile app is managed at [https://translate.fillnode.com](https://translate.fillnode.com) using Crowdin. Please read the [translation guide](https://www.fillnode.com/docs/contributing/translating-fillnode-to-your-language) for contributing to Fillnode.
 
 ## Branching model
 
@@ -102,24 +102,24 @@ If you are looking for a stable version, please use the `master` or tags labelle
 
 ### Heroku one-click deploy
 
-Deploying Chatwoot to Heroku is a breeze. It's as simple as clicking this button:
+Deploying Fillnode to Heroku is a breeze. It's as simple as clicking this button:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/chatwoot/chatwoot/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/fillnode/fillnode/tree/master)
 
-Follow this [link](https://www.chatwoot.com/docs/environment-variables) to understand setting the correct environment variables for the app to work with all the features. There might be breakages if you do not set the relevant environment variables.
+Follow this [link](https://www.fillnode.com/docs/environment-variables) to understand setting the correct environment variables for the app to work with all the features. There might be breakages if you do not set the relevant environment variables.
 
 
 ### DigitalOcean 1-Click Kubernetes deployment
 
-Chatwoot now supports 1-Click deployment to DigitalOcean as a kubernetes app.
+Fillnode now supports 1-Click deployment to DigitalOcean as a kubernetes app.
 
-<a href="https://marketplace.digitalocean.com/apps/chatwoot?refcode=f2238426a2a8" alt="Deploy to DigitalOcean">
+<a href="https://marketplace.digitalocean.com/apps/fillnode?refcode=f2238426a2a8" alt="Deploy to DigitalOcean">
   <img width="200" alt="Deploy to DO" src="https://www.deploytodo.com/do-btn-blue.svg"/>
 </a>
 
 ### Other deployment options
 
-For other supported options, checkout our [deployment page](https://chatwoot.com/deploy).
+For other supported options, checkout our [deployment page](https://fillnode.com/deploy).
 
 ## Security
 
@@ -131,9 +131,9 @@ If you need help or just want to hang out, come, say hi on our [Discord](https:/
 
 ## Contributors
 
-Thanks goes to all these [wonderful people](https://www.chatwoot.com/docs/contributors):
+Thanks goes to all these [wonderful people](https://www.fillnode.com/docs/contributors):
 
-<a href="https://github.com/chatwoot/chatwoot/graphs/contributors"><img src="https://opencollective.com/chatwoot/contributors.svg?width=890&button=false" /></a>
+<a href="https://github.com/fillnode/fillnode/graphs/contributors"><img src="https://opencollective.com/fillnode/contributors.svg?width=890&button=false" /></a>
 
 
-*Chatwoot* &copy; 2017-2026, Chatwoot Inc - Released under the MIT License.
+*Fillnode* &copy; 2017-2026, Fillnode Inc - Released under the MIT License.

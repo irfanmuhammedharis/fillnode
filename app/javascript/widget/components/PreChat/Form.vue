@@ -2,7 +2,7 @@
 import CustomButton from 'shared/components/Button.vue';
 import Spinner from 'shared/components/Spinner.vue';
 import { mapGetters } from 'vuex';
-import { getContrastingTextColor } from '@chatwoot/utils';
+import { getContrastingTextColor } from '@fillnode/utils';
 import { isEmptyObject } from 'widget/helpers/utils';
 import { getRegexp } from 'shared/helpers/Validators';
 import { useMessageFormatter } from 'shared/composables/useMessageFormatter';

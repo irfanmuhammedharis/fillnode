@@ -1,6 +1,6 @@
 ## github action to check deployment success
 ## curl the deployment url and check for 200 status
-## deployment url will be of the form chatwoot-pr-<pr_number>.herokuapp.com
+## deployment url will be of the form fillnode-pr-<pr_number>.herokuapp.com
 name: Deploy Check
 
 on:
@@ -19,7 +19,7 @@ jobs:
       - name: Install jq
         run: sudo apt-get install -y jq
       - name: Print Deployment URL
-        run: echo "https://chatwoot-pr-${{ github.event.pull_request.number }}.herokuapp.com"
+        run: echo "https://fillnode-pr-${{ github.event.pull_request.number }}.herokuapp.com"
       - name: Check Deployment Status
         run: |
           max_attempts=10
@@ -28,10 +28,10 @@ jobs:
           echo "Waiting for review app to be deployed/redeployed, trying in  10 minutes..."
           sleep 600
           while [ $attempt -le $max_attempts ]; do
-            response=$(curl -s -o /dev/null -w "%{http_code}" https://chatwoot-pr-${{ github.event.pull_request.number }}.herokuapp.com/api)
+            response=$(curl -s -o /dev/null -w "%{http_code}" https://fillnode-pr-${{ github.event.pull_request.number }}.herokuapp.com/api)
             status_code=$(echo $response | head -n   1)
             if [ $status_code -eq   200 ]; then
-              body=$(curl -s https://chatwoot-pr-${{ github.event.pull_request.number }}.herokuapp.com/api)
+              body=$(curl -s https://fillnode-pr-${{ github.event.pull_request.number }}.herokuapp.com/api)
               if echo "$body" | jq -e '.version and .timestamp and .queue_services == "ok" and .data_services == "ok"' > /dev/null; then
                 echo "Deployment successful"
                 exit 0

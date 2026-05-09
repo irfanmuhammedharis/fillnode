@@ -13,7 +13,7 @@ import Icon from 'dashboard/components-next/icon/Icon.vue';
 import NextButton from 'dashboard/components-next/button/Button.vue';
 
 import { mapGetters } from 'vuex';
-import { convertSecondsToTimeUnit } from '@chatwoot/utils';
+import { convertSecondsToTimeUnit } from '@fillnode/utils';
 import { useAlert } from 'dashboard/composables';
 import { picoSearch } from '@scmmishra/pico-search';
 
@@ -41,7 +41,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      isOnChatwootCloud: 'globalConfig/isOnChatwootCloud',
+      isOnFillnodeCloud: 'globalConfig/isOnFillnodeCloud',
       isFeatureEnabledonAccount: 'accounts/isFeatureEnabledonAccount',
       records: 'sla/getSLA',
       currentUser: 'getCurrentUser',
@@ -170,7 +170,7 @@ export default {
       <SLAPaywallEnterprise
         v-if="isBehindAPaywall"
         :is-super-admin="isSuperAdmin"
-        :is-on-chatwoot-cloud="isOnChatwootCloud"
+        :is-on-fillnode-cloud="isOnFillnodeCloud"
         @upgrade="onClickCTA"
       />
       <BaseTable

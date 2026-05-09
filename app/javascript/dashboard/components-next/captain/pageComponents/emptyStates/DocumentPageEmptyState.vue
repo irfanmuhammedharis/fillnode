@@ -8,7 +8,7 @@ import FeatureSpotlight from 'dashboard/components-next/feature-spotlight/Featur
 import { documentsList } from 'dashboard/components-next/captain/pageComponents/emptyStates/captainEmptyStateContent.js';
 
 const emit = defineEmits(['click']);
-const { isOnChatwootCloud } = useAccount();
+const { isOnFillnodeCloud } = useAccount();
 
 const { replaceInstallationName } = useBranding();
 
@@ -23,8 +23,7 @@ const onClick = () => {
     :note="$t('CAPTAIN.DOCUMENTS.EMPTY_STATE.FEATURE_SPOTLIGHT.NOTE')"
     fallback-thumbnail="/assets/images/dashboard/captain/document-light.svg"
     fallback-thumbnail-dark="/assets/images/dashboard/captain/document-dark.svg"
-    learn-more-url="https://chwt.app/captain-document"
-    :hide-actions="!isOnChatwootCloud"
+    :hide-actions="!isOnFillnodeCloud"
     class="mb-8"
   />
   <EmptyStateLayout

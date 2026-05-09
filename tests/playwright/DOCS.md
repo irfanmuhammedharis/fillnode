@@ -1,12 +1,12 @@
-# Chatwoot E2E Testing - Documentation
+# Fillnode E2E Testing - Documentation
 
-Complete guide for writing and maintaining E2E tests for Chatwoot.
+Complete guide for writing and maintaining E2E tests for Fillnode.
 
 ---
 
 ## Overview
 
-End-to-end testing suite for Chatwoot built with Playwright and TypeScript using the Component Object Model (COM) pattern.
+End-to-end testing suite for Fillnode built with Playwright and TypeScript using the Component Object Model (COM) pattern.
 
 ---
 
@@ -33,7 +33,7 @@ All configuration managed through `.env` file. Copy `.env.example` to `.env`:
 
 ```
 BASE_URL=http://localhost:3000
-TEST_USER_EMAIL=admin@chatwoot.com
+TEST_USER_EMAIL=admin@fillnode.com
 TEST_USER_PASSWORD="Password123@#"
 ACCOUNT_ID=1
 
@@ -130,7 +130,7 @@ const inboxName = fake.inboxName();
 ## Troubleshooting
 
 **Authentication errors:**
-- Verify `.env` credentials match Chatwoot
+- Verify `.env` credentials match Fillnode
 - Check for rate limiting (429 errors)
 
 **Database errors:**
@@ -138,7 +138,7 @@ const inboxName = fake.inboxName();
 - Check credentials in `.env`
 
 **Timeout errors:**
-- Ensure Chatwoot is running at `BASE_URL`
+- Ensure Fillnode is running at `BASE_URL`
 - Increase timeout: `{ timeout: 60000 }`
 
 **Element not found:**

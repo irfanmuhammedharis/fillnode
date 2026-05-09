@@ -25,7 +25,7 @@ const store = useStore();
 const { t } = useI18n();
 const { checkPermissions } = usePolicy();
 
-const { isOnChatwootCloud } = useAccount();
+const { isOnFillnodeCloud } = useAccount();
 const uiFlags = useMapGetter('captainDocuments/getUIFlags');
 const documents = useMapGetter('captainDocuments/getRecords');
 const isFetching = computed(() => uiFlags.value.fetchingList);
@@ -196,10 +196,9 @@ onMounted(() => {
         :button-label="$t('CAPTAIN.HEADER_KNOW_MORE')"
         :title="$t('CAPTAIN.DOCUMENTS.EMPTY_STATE.FEATURE_SPOTLIGHT.TITLE')"
         :note="$t('CAPTAIN.DOCUMENTS.EMPTY_STATE.FEATURE_SPOTLIGHT.NOTE')"
-        :hide-actions="!isOnChatwootCloud"
+        :hide-actions="!isOnFillnodeCloud"
         fallback-thumbnail="/assets/images/dashboard/captain/document-popover-light.svg"
         fallback-thumbnail-dark="/assets/images/dashboard/captain/document-popover-dark.svg"
-        learn-more-url="https://chwt.app/captain-document"
       />
     </template>
 

@@ -6,7 +6,7 @@ const commit = vi.fn();
 global.axios = axios;
 vi.mock('axios');
 
-vi.mock('@chatwoot/utils', () => ({
+vi.mock('@fillnode/utils', () => ({
   debounce: vi.fn(fn => {
     return fn;
   }),

@@ -20,7 +20,7 @@ export const mockCurrentChat = {
       availability_status: 'offline',
       email: null,
       id: 212,
-      name: 'Chatwoot',
+      name: 'Fillnode',
       phone_number: null,
       identifier: null,
       thumbnail: '',
@@ -94,7 +94,7 @@ export const mockCurrentChat = {
       browser_version: '127.0.0.0',
       platform_version: '10.15.7',
     },
-    referer: 'http://chatwoot.com/widget_tests?dark_mode=auto',
+    referer: 'http://fillnode.com/widget_tests?dark_mode=auto',
     initiated_at: {
       timestamp: 'Fri Aug 02 2024 15:21:18 GMT+0530 (India Standard Time)',
     },

@@ -2,7 +2,7 @@
 import { mapGetters } from 'vuex';
 import { useVuelidate } from '@vuelidate/core';
 import { required, email } from '@vuelidate/validators';
-import { getContrastingTextColor } from '@chatwoot/utils';
+import { getContrastingTextColor } from '@fillnode/utils';
 
 import FluentIcon from 'shared/components/FluentIcon/Index.vue';
 import Spinner from 'shared/components/Spinner.vue';

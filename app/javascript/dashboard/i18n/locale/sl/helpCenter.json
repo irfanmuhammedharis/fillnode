@@ -419,7 +419,7 @@
         "SLUG": {
           "LABEL": "Oznaka",
           "PLACEHOLDER": "Oznaka kategorije za spletne naslove",
-          "HELP_TEXT": "app.chatwoot.com/hc/my-portal/sl-SI/categories/my-slug",
+          "HELP_TEXT": "app.fillnode.com/hc/my-portal/sl-SI/categories/my-slug",
           "ERROR": "Slug je obvezen"
         },
         "DESCRIPTION": {
@@ -450,7 +450,7 @@
         "SLUG": {
           "LABEL": "Oznaka",
           "PLACEHOLDER": "Oznaka kategorije za spletne naslove",
-          "HELP_TEXT": "app.chatwoot.com/hc/my-portal/sl-SI/categories/my-slug",
+          "HELP_TEXT": "app.fillnode.com/hc/my-portal/sl-SI/categories/my-slug",
           "ERROR": "Slug je obvezen"
         },
         "DESCRIPTION": {
@@ -634,7 +634,7 @@
             "LABEL": "Oznaka",
             "PLACEHOLDER": "Oznaka kategorije za spletne naslove",
             "ERROR": "Slug je obvezen",
-            "HELP_TEXT": "app.chatwoot.com/hc/{portalSlug}/{localeCode}/categories/{categorySlug}"
+            "HELP_TEXT": "app.fillnode.com/hc/{portalSlug}/{localeCode}/categories/{categorySlug}"
           },
           "DESCRIPTION": {
             "LABEL": "Opis",
@@ -727,7 +727,7 @@
       "CONFIRM_BUTTON_LABEL": "Ustvari",
       "NAME": {
         "LABEL": "Ime",
-        "PLACEHOLDER": "Uporabniški vodič | Chatwoot",
+        "PLACEHOLDER": "Uporabniški vodič | Fillnode",
         "MESSAGE": "Izberite ime za vaš portal.",
         "ERROR": "Ime je obvezno"
       },

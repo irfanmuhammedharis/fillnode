@@ -8,7 +8,7 @@ import Button from 'next/button/Button.vue';
 import Icon from 'next/icon/Icon.vue';
 import { useSnakeCase } from 'dashboard/composables/useTransformKeys';
 import { useMessageContext } from '../provider.js';
-import { downloadFile } from '@chatwoot/utils';
+import { downloadFile } from '@fillnode/utils';
 
 import GalleryView from 'dashboard/components/widgets/conversation/components/GalleryView.vue';
 

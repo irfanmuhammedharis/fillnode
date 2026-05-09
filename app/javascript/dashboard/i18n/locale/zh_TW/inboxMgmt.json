@@ -16,7 +16,7 @@
     "CREATE_FLOW": {
       "CHANNEL": {
         "TITLE": "選擇頻道",
-        "BODY": "選擇您想要與 Chatwoot 整合的服務供應商。"
+        "BODY": "選擇您想要與 Fillnode 整合的服務供應商。"
       },
       "INBOX": {
         "TITLE": "建立收件匣",
@@ -42,7 +42,7 @@
         "PLACEHOLDER": "輸入您的網站名稱（例：Acme Inc）"
       },
       "FB": {
-        "HELP": "注意：登入後，我們僅能存取您粉絲專頁的訊息。Chatwoot 永遠無法存取您的私人訊息。",
+        "HELP": "注意：登入後，我們僅能存取您粉絲專頁的訊息。Fillnode 永遠無法存取您的私人訊息。",
         "CHOOSE_PAGE": "選擇粉絲專頁",
         "CHOOSE_PLACEHOLDER": "從列表中選擇一個粉絲專頁",
         "INBOX_NAME": "收件匣名稱",
@@ -449,7 +449,7 @@
       },
       "AUTH": {
         "TITLE": "選擇頻道",
-        "DESC": "Chatwoot 支援即時聊天小工具、Facebook Messenger、WhatsApp、電子郵件等頻道。如果您想建立自訂頻道，可以使用 API 頻道來建立。請選擇以下其中一個頻道開始使用。",
+        "DESC": "Fillnode 支援即時聊天小工具、Facebook Messenger、WhatsApp、電子郵件等頻道。如果您想建立自訂頻道，可以使用 API 頻道來建立。請選擇以下其中一個頻道開始使用。",
         "TITLE_NEXT": "完成設定",
         "TITLE_FINISH": "完成！",
         "CHANNEL": {
@@ -507,11 +507,11 @@
       },
       "DETAILS": {
         "TITLE": "收件匣詳情",
-        "DESC": "從下方的下拉選單中選擇您要連結至 Chatwoot 的 Facebook 粉絲專頁。您也可以為收件匣設定自訂名稱以便識別。"
+        "DESC": "從下方的下拉選單中選擇您要連結至 Fillnode 的 Facebook 粉絲專頁。您也可以為收件匣設定自訂名稱以便識別。"
       },
       "FINISH": {
         "TITLE": "完成！",
-        "DESC": "您已成功將 Facebook 粉絲專頁與 Chatwoot 整合。下次客戶在您的粉絲專頁發送訊息時，對話將自動出現在收件匣中。<br>我們也為您提供了一段小工具程式碼，您可以輕鬆地加入到您的網站中。網站上線後，客戶可以直接從您的網站傳送訊息給您，無需任何外部工具，對話將直接顯示在 Chatwoot 中。<br>很酷吧？我們一直在努力 :)"
+        "DESC": "您已成功將 Facebook 粉絲專頁與 Fillnode 整合。下次客戶在您的粉絲專頁發送訊息時，對話將自動出現在收件匣中。<br>我們也為您提供了一段小工具程式碼，您可以輕鬆地加入到您的網站中。網站上線後，客戶可以直接從您的網站傳送訊息給您，無需任何外部工具，對話將直接顯示在 Fillnode 中。<br>很酷吧？我們一直在努力 :)"
       },
       "EMAIL_PROVIDER": {
         "TITLE": "選擇您的電子郵件供應商",
@@ -1123,8 +1123,8 @@
         "USER_MESSAGE": "您好",
         "AGENT_MESSAGE": "哈囉"
       },
-      "BRANDING_TEXT": "Powered by Chatwoot",
-      "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
+      "BRANDING_TEXT": "Powered by Fillnode",
+      "SCRIPT_SETTINGS": "\n      window.fillnodeSettings = {options};"
     },
     "EMAIL_PROVIDERS": {
       "MICROSOFT": {

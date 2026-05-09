@@ -190,7 +190,7 @@ RSpec.describe ReplyMailbox do
       end
 
       it 'find channel with in message source id stated in in_reply_to' do
-        conversation_1.messages.new(source_id: '0CB459E0-0336-41DA-BC88-E6E28C697DDB@chatwoot.com', account_id: account.id, message_type: 'incoming',
+        conversation_1.messages.new(source_id: '0CB459E0-0336-41DA-BC88-E6E28C697DDB@fillnode.com', account_id: account.id, message_type: 'incoming',
                                     inbox_id: email_channel.inbox.id).save!
         described_class.receive in_reply_to_email
         expect(conversation_1.messages.last.content).to eq("Let's talk about these images:")
@@ -213,7 +213,7 @@ RSpec.describe ReplyMailbox do
           <<~BODY.chomp
             Yes, I am providing you step how to reproduce this issue
 
-            On Thu, Aug 19, 2021 at 2:07 PM Tejaswini from Email sender test < tejaswini@chatwoot.com> wrote:
+            On Thu, Aug 19, 2021 at 2:07 PM Tejaswini from Email sender test < tejaswini@fillnode.com> wrote:
 
             > Any update on this?
             >
@@ -234,7 +234,7 @@ RSpec.describe ReplyMailbox do
           <<~BODY.chomp
             Yes, I am providing you step how to reproduce this issue
 
-            On Thu, Aug 19, 2021 at 2:07 PM Tejaswini from Email sender test < tejaswini@chatwoot.com> wrote:
+            On Thu, Aug 19, 2021 at 2:07 PM Tejaswini from Email sender test < tejaswini@fillnode.com> wrote:
 
             > Any update on this?
             >
@@ -345,9 +345,9 @@ RSpec.describe ReplyMailbox do
     end
   end
 
-  describe 'when a chatwoot notification email is received' do
+  describe 'when a fillnode notification email is received' do
     let(:account) { create(:account) }
-    let!(:channel_email) { create(:channel_email, email: 'sojan@chatwoot.com', account: account) }
+    let!(:channel_email) { create(:channel_email, email: 'sojan@fillnode.com', account: account) }
     let(:notification_mail) { create_inbound_email_from_fixture('notification.eml') }
     let(:described_subject) { described_class.receive notification_mail }
     let(:conversation) { Conversation.where(inbox_id: channel_email.inbox).last }
@@ -414,8 +414,8 @@ RSpec.describe ReplyMailbox do
       end
 
       it 'creates contact with proper email address' do
-        expect(support_in_reply_to_mail.mail['reply_to'].try(:value)).to eq('Sony Mathew <sony@chatwoot.com>')
-        expect(conversation.contact.email).to eq('sony@chatwoot.com')
+        expect(support_in_reply_to_mail.mail['reply_to'].try(:value)).to eq('Sony Mathew <sony@fillnode.com>')
+        expect(conversation.contact.email).to eq('sony@fillnode.com')
       end
     end
 
@@ -537,7 +537,7 @@ RSpec.describe ReplyMailbox do
 
       before do
         # this email is hardcoded eml fixture file that's why we are updating this
-        channel_email.email = 'support@chatwoot.com'
+        channel_email.email = 'support@fillnode.com'
         channel_email.save!
       end
 
@@ -577,7 +577,7 @@ RSpec.describe ReplyMailbox do
         expect(conversation_1.messages.count).to eq(1)
 
         reply_mail_without_uuid.mail['In-Reply-To'] = 'conversation/6bdc3f4d-0bec-4515-a284-5d916fdde489/messages/123'
-        reply_mail_without_uuid.mail['Message-Id'] = '0CB459E0-0336-41DA-BC88-E6E28C697SFC@chatwoot.com'
+        reply_mail_without_uuid.mail['Message-Id'] = '0CB459E0-0336-41DA-BC88-E6E28C697SFC@fillnode.com'
 
         described_class.receive reply_mail_without_uuid
 
@@ -624,7 +624,7 @@ RSpec.describe ReplyMailbox do
 
             We are providing you platform from here you can sell paid posts on your website.
 
-            Chatwoot | CS team | [C](https://d33wubrfki0l68.cloudfront.net/973467c532160fd8b940300a43fa85fa2d060307/dc9a0/static/brand-73f58cdefae282ae74cebfa74c1d7003.svg)
+            Fillnode | CS team | [C](https://d33wubrfki0l68.cloudfront.net/973467c532160fd8b940300a43fa85fa2d060307/dc9a0/static/brand-73f58cdefae282ae74cebfa74c1d7003.svg)
 
             Skype: live:.cid.something
 

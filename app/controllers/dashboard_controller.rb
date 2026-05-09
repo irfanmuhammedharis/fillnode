@@ -13,7 +13,7 @@ class DashboardController < ActionController::Base
     PRIVACY_URL
     DISPLAY_MANIFEST
     CREATE_NEW_ACCOUNT_FROM_DASHBOARD
-    CHATWOOT_INBOX_TOKEN
+    FILLNODE_INBOX_TOKEN
     API_CHANNEL_NAME
     API_CHANNEL_THUMBNAIL
     CLOUD_ANALYTICS_TOKEN
@@ -52,7 +52,7 @@ class DashboardController < ActionController::Base
   end
 
   def ensure_installation_onboarding
-    redirect_to '/installation/onboarding' if ::Redis::Alfred.get(::Redis::Alfred::CHATWOOT_INSTALLATION_ONBOARDING)
+    redirect_to '/installation/onboarding' if ::Redis::Alfred.get(::Redis::Alfred::FILLNODE_INSTALLATION_ONBOARDING)
   end
 
   def render_hc_if_custom_domain
@@ -68,7 +68,7 @@ class DashboardController < ActionController::Base
 
   def app_config
     {
-      APP_VERSION: Chatwoot.config[:version],
+      APP_VERSION: Fillnode.config[:version],
       VAPID_PUBLIC_KEY: VapidService.public_key,
       ENABLE_ACCOUNT_SIGNUP: GlobalConfigService.load('ENABLE_ACCOUNT_SIGNUP', 'false'),
       FB_APP_ID: GlobalConfigService.load('FB_APP_ID', ''),
@@ -77,7 +77,7 @@ class DashboardController < ActionController::Base
       FACEBOOK_API_VERSION: GlobalConfigService.load('FACEBOOK_API_VERSION', 'v18.0'),
       WHATSAPP_APP_ID: GlobalConfigService.load('WHATSAPP_APP_ID', ''),
       WHATSAPP_CONFIGURATION_ID: GlobalConfigService.load('WHATSAPP_CONFIGURATION_ID', ''),
-      IS_ENTERPRISE: ChatwootApp.enterprise?,
+      IS_ENTERPRISE: FillnodeApp.enterprise?,
       AZURE_APP_ID: GlobalConfigService.load('AZURE_APP_ID', ''),
       GIT_SHA: GIT_HASH,
       ALLOWED_LOGIN_METHODS: allowed_login_methods,
@@ -86,15 +86,12 @@ class DashboardController < ActionController::Base
   end
 
   def active_platform_banners
-    return [] unless ChatwootApp.chatwoot_cloud?
-
-    PlatformBanner.active.order(created_at: :desc).as_json(only: %i[id banner_message banner_type updated_at])
+    []
   end
 
   def allowed_login_methods
     methods = ['email']
     methods << 'google_oauth' if GlobalConfigService.load('ENABLE_GOOGLE_OAUTH_LOGIN', 'true').to_s != 'false'
-    methods << 'saml' if ChatwootHub.pricing_plan != 'community' && GlobalConfigService.load('ENABLE_SAML_SSO_LOGIN', 'true').to_s != 'false'
     methods
   end
 

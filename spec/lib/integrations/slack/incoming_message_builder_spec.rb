@@ -41,7 +41,7 @@ describe Integrations::Slack::IncomingMessageBuilder do
   let!(:conversation) { create(:conversation, identifier: message_params[:event][:thread_ts]) }
 
   before do
-    stub_request(:get, 'https://chatwoot-assets.local/sample.png').to_return(
+    stub_request(:get, 'https://fillnode-assets.local/sample.png').to_return(
       status: 200,
       body: File.read('spec/assets/sample.png'),
       headers: {}
@@ -72,7 +72,7 @@ describe Integrations::Slack::IncomingMessageBuilder do
         allow(builder).to receive(:resolve_slack_sender).and_return([nil, nil, nil])
         2.times.each { builder.perform }
         expect(conversation.messages.count).to eql(messages_count + 1)
-        expect(conversation.messages.last.content).to eql('this is test https://chatwoot.com Hey @Sojan Test again')
+        expect(conversation.messages.last.content).to eql('this is test https://fillnode.com Hey @Sojan Test again')
       end
 
       it 'creates message' do
@@ -82,7 +82,7 @@ describe Integrations::Slack::IncomingMessageBuilder do
         allow(builder).to receive(:resolve_slack_sender).and_return([nil, nil, nil])
         builder.perform
         expect(conversation.messages.count).to eql(messages_count + 1)
-        expect(conversation.messages.last.content).to eql('this is test https://chatwoot.com Hey @Sojan Test again')
+        expect(conversation.messages.last.content).to eql('this is test https://fillnode.com Hey @Sojan Test again')
       end
 
       it 'creates a private note' do
@@ -142,7 +142,7 @@ describe Integrations::Slack::IncomingMessageBuilder do
         allow(builder).to receive(:resolve_slack_sender).and_return([nil, nil, nil])
         builder.perform
         expect(conversation.messages.count).to eql(messages_count + 1)
-        expect(conversation.messages.last.content).to eql('this is test https://chatwoot.com Hey @Sojan Test again')
+        expect(conversation.messages.last.content).to eql('this is test https://fillnode.com Hey @Sojan Test again')
         expect(conversation.messages.last.attachments).to be_any
       end
 
@@ -179,7 +179,7 @@ describe Integrations::Slack::IncomingMessageBuilder do
         allow(builder).to receive(:slack_client).and_return(slack_client)
       end
 
-      context 'when slack user email matches a chatwoot agent' do
+      context 'when slack user email matches a fillnode agent' do
         before do
           create(:user, account: conversation.account, email: 'agent@example.com')
           slack_response = {
@@ -205,7 +205,7 @@ describe Integrations::Slack::IncomingMessageBuilder do
         end
       end
 
-      context 'when slack user email does not match any chatwoot agent' do
+      context 'when slack user email does not match any fillnode agent' do
         before do
           slack_response = {
             user: {
@@ -277,8 +277,8 @@ describe Integrations::Slack::IncomingMessageBuilder do
         {
           team_id: 'TLST3048H',
           api_app_id: 'A012S5UETV4',
-          event: link_shared_event.merge({ links: [{ url: "https://qa.chatwoot.com/app/accounts/1/conversations/#{conversation.display_id}",
-                                                     domain: 'qa.chatwoot.com' }] }),
+          event: link_shared_event.merge({ links: [{ url: "https://qa.fillnode.com/app/accounts/1/conversations/#{conversation.display_id}",
+                                                     domain: 'qa.fillnode.com' }] }),
           type: 'event_callback',
           event_time: 1_588_623_033
         }

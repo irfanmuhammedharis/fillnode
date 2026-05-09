@@ -1,7 +1,7 @@
-export const CHATWOOT_ERROR = 'chatwoot:error';
-export const CHATWOOT_ON_MESSAGE = 'chatwoot:on-message';
-export const CHATWOOT_ON_START_CONVERSATION = 'chatwoot:on-start-conversation';
-export const CHATWOOT_POSTBACK = 'chatwoot:postback';
-export const CHATWOOT_READY = 'chatwoot:ready';
-export const CHATWOOT_OPENED = 'chatwoot:opened';
-export const CHATWOOT_CLOSED = 'chatwoot:closed';
+export const FILLNODE_ERROR = 'fillnode:error';
+export const FILLNODE_ON_MESSAGE = 'fillnode:on-message';
+export const FILLNODE_ON_START_CONVERSATION = 'fillnode:on-start-conversation';
+export const FILLNODE_POSTBACK = 'fillnode:postback';
+export const FILLNODE_READY = 'fillnode:ready';
+export const FILLNODE_OPENED = 'fillnode:opened';
+export const FILLNODE_CLOSED = 'fillnode:closed';

@@ -261,7 +261,7 @@
     "SENT_BY": "Göndərən:",
     "BOT": "Bot",
     "NATIVE_APP": "Yerli tətbiq",
-    "NATIVE_APP_ADVISORY": "Bu mesaj yerli tətbiqdən göndərilib. Mesaj pəncərəsini saxlamaq üçün Chatwoot-dan cavab verin.",
+    "NATIVE_APP_ADVISORY": "Bu mesaj yerli tətbiqdən göndərilib. Mesaj pəncərəsini saxlamaq üçün Fillnode-dan cavab verin.",
     "SEND_FAILED": "Mesaj göndərmək mümkün olmadı! Yenidən cəhd edin",
     "TRY_AGAIN": "yenidən cəhd et",
     "ASSIGNMENT": {

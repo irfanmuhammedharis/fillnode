@@ -449,7 +449,7 @@
       },
       "AUTH": {
         "TITLE": "ഒരു ചാനൽ തിരഞ്ഞെടുക്കുക",
-        "DESC": "Chatwoot supports live-chat widgets, Facebook Messenger, Twitter profiles, WhatsApp, Emails, etc., as channels. If you want to build a custom channel, you can create it using the API channel. To get started, choose one of the channels below.",
+        "DESC": "Fillnode supports live-chat widgets, Facebook Messenger, Twitter profiles, WhatsApp, Emails, etc., as channels. If you want to build a custom channel, you can create it using the API channel. To get started, choose one of the channels below.",
         "TITLE_NEXT": "സജ്ജീകരണം പൂർത്തിയാക്കുക",
         "TITLE_FINISH": "വോയ്ലാ!",
         "CHANNEL": {
@@ -1123,8 +1123,8 @@
         "USER_MESSAGE": "ഹായ്",
         "AGENT_MESSAGE": "ഹലോ"
       },
-      "BRANDING_TEXT": "പ്രായോജകർ Chatwoot",
-      "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
+      "BRANDING_TEXT": "പ്രായോജകർ Fillnode",
+      "SCRIPT_SETTINGS": "\n      window.fillnodeSettings = {options};"
     },
     "EMAIL_PROVIDERS": {
       "MICROSOFT": {

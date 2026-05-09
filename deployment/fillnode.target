@@ -1,0 +1,5 @@
+[Unit]
+Wants=fillnode-web.1.service fillnode-worker.1.service
+
+[Install]
+WantedBy=multi-user.target

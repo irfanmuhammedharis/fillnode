@@ -8,7 +8,7 @@ import {
 } from 'vue';
 import Icon from 'next/icon/Icon.vue';
 import { timeStampAppendedURL } from 'dashboard/helper/URLHelper';
-import { downloadFile } from '@chatwoot/utils';
+import { downloadFile } from '@fillnode/utils';
 import { useEmitter } from 'dashboard/composables/emitter';
 import { emitter } from 'shared/helpers/mitt';
 

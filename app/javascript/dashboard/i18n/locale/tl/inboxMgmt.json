@@ -16,7 +16,7 @@
     "CREATE_FLOW": {
       "CHANNEL": {
         "TITLE": "Pumili ng Channel",
-        "BODY": "Pumili ng provider na nais mong i-integrate sa Chatwoot."
+        "BODY": "Pumili ng provider na nais mong i-integrate sa Fillnode."
       },
       "INBOX": {
         "TITLE": "Gumawa ng Inbox",
@@ -42,7 +42,7 @@
         "PLACEHOLDER": "Ilagay ang pangalan ng iyong website (hal: Acme Inc)"
       },
       "FB": {
-        "HELP": "PS: Sa pag-sign in, nakakakuha lang kami ng access sa mga mensahe ng iyong Pahina. Hindi kailanman maa-access ng Chatwoot ang iyong mga pribadong mensahe.",
+        "HELP": "PS: Sa pag-sign in, nakakakuha lang kami ng access sa mga mensahe ng iyong Pahina. Hindi kailanman maa-access ng Fillnode ang iyong mga pribadong mensahe.",
         "CHOOSE_PAGE": "Pumili ng Pahina",
         "CHOOSE_PLACEHOLDER": "Pumili ng pahina mula sa listahan",
         "INBOX_NAME": "Pangalan ng Inbox",
@@ -449,7 +449,7 @@
       },
       "AUTH": {
         "TITLE": "Pumili ng channel",
-        "DESC": "Sinusuportahan ng Chatwoot ang live-chat widgets, Facebook Messenger, WhatsApp, Emails, atbp., bilang mga channel. Kung nais mong gumawa ng custom na channel, maaari mo itong likhain gamit ang API channel. Upang magsimula, pumili ng isa sa mga channel sa ibaba.",
+        "DESC": "Sinusuportahan ng Fillnode ang live-chat widgets, Facebook Messenger, WhatsApp, Emails, atbp., bilang mga channel. Kung nais mong gumawa ng custom na channel, maaari mo itong likhain gamit ang API channel. Upang magsimula, pumili ng isa sa mga channel sa ibaba.",
         "TITLE_NEXT": "Kumpletuhin ang setup",
         "TITLE_FINISH": "Voilà!",
         "CHANNEL": {
@@ -507,11 +507,11 @@
       },
       "DETAILS": {
         "TITLE": "Mga Detalye ng Inbox",
-        "DESC": "Mula sa dropdown sa ibaba, piliin ang Facebook Page na nais mong ikonekta sa Chatwoot. Maaari ka ring magbigay ng pasadyang pangalan sa iyong inbox para sa mas madaling pagkilala."
+        "DESC": "Mula sa dropdown sa ibaba, piliin ang Facebook Page na nais mong ikonekta sa Fillnode. Maaari ka ring magbigay ng pasadyang pangalan sa iyong inbox para sa mas madaling pagkilala."
       },
       "FINISH": {
         "TITLE": "Tama na!",
-        "DESC": "Matagumpay mong natapos ang pag-integrate ng iyong Facebook Page sa Chatwoot. Sa susunod na mag-message ang isang customer sa iyong Pahina, awtomatikong lalabas ang pag-uusap sa iyong inbox.<br>Nagbibigay din kami sa iyo ng widget script na madali mong maidadagdag sa iyong website. Kapag ito ay live na sa iyong website, maaaring mag-message ang mga customer nang direkta mula sa iyong website nang hindi na kailangan ng anumang panlabas na tool at lalabas ang pag-uusap dito mismo, sa Chatwoot.<br>Astig, di ba? Sinisikap talaga namin :)"
+        "DESC": "Matagumpay mong natapos ang pag-integrate ng iyong Facebook Page sa Fillnode. Sa susunod na mag-message ang isang customer sa iyong Pahina, awtomatikong lalabas ang pag-uusap sa iyong inbox.<br>Nagbibigay din kami sa iyo ng widget script na madali mong maidadagdag sa iyong website. Kapag ito ay live na sa iyong website, maaaring mag-message ang mga customer nang direkta mula sa iyong website nang hindi na kailangan ng anumang panlabas na tool at lalabas ang pag-uusap dito mismo, sa Fillnode.<br>Astig, di ba? Sinisikap talaga namin :)"
       },
       "EMAIL_PROVIDER": {
         "TITLE": "Piliin ang iyong email provider",
@@ -1123,8 +1123,8 @@
         "USER_MESSAGE": "Kumusta",
         "AGENT_MESSAGE": "Kumusta"
       },
-      "BRANDING_TEXT": "Pinapagana ng Chatwoot",
-      "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
+      "BRANDING_TEXT": "Pinapagana ng Fillnode",
+      "SCRIPT_SETTINGS": "\n      window.fillnodeSettings = {options};"
     },
     "EMAIL_PROVIDERS": {
       "MICROSOFT": {

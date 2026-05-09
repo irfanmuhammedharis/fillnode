@@ -39,8 +39,8 @@ const showChatSupport = computed(() => {
   return (
     isFeatureEnabledonAccount.value(
       accountId.value,
-      FEATURE_FLAGS.CONTACT_CHATWOOT_SUPPORT_TEAM
-    ) && globalConfig.value.chatwootInboxToken
+      FEATURE_FLAGS.CONTACT_FILLNODE_SUPPORT_TEAM
+    ) && globalConfig.value.fillnodeInboxToken
   );
 });
 
@@ -52,7 +52,7 @@ const menuItems = computed(() => {
       label: t('SIDEBAR_ITEMS.CONTACT_SUPPORT'),
       icon: 'i-lucide-life-buoy',
       click: () => {
-        window.$chatwoot.toggle();
+        window.$fillnode.toggle();
       },
     },
     {
@@ -86,7 +86,7 @@ const menuItems = computed(() => {
       showOnCustomBrandedInstance: false,
       label: t('SIDEBAR_ITEMS.DOCS'),
       icon: 'i-lucide-book',
-      link: 'https://www.chatwoot.com/hc/user-guide/en',
+      link: 'https://www.fillnode.com/hc/user-guide/en',
       nativeLink: true,
       target: '_blank',
     },
@@ -95,7 +95,7 @@ const menuItems = computed(() => {
       showOnCustomBrandedInstance: false,
       label: t('SIDEBAR_ITEMS.CHANGELOG'),
       icon: 'i-lucide-scroll-text',
-      link: 'https://www.chatwoot.com/changelog/',
+      link: 'https://www.fillnode.com/changelog/',
       nativeLink: true,
       target: '_blank',
     },

@@ -1,4 +1,4 @@
-import { getAllowedFileTypesByChannel } from '@chatwoot/utils';
+import { getAllowedFileTypesByChannel } from '@fillnode/utils';
 import { INBOX_TYPES } from 'dashboard/helper/inbox';
 import { ALLOWED_FILE_TYPES } from 'shared/constants/messages';
 

@@ -5,9 +5,9 @@ RSpec.describe Enterprise::Concerns::Portal do
     let(:portal) { create(:portal, custom_domain: nil) }
 
     context 'when custom_domain is changed' do
-      context 'when on chatwoot cloud' do
+      context 'when on fillnode cloud' do
         before do
-          allow(ChatwootApp).to receive(:chatwoot_cloud?).and_return(true)
+          allow(FillnodeApp).to receive(:fillnode_cloud?).and_return(true)
         end
 
         it 'enqueues cloudflare verification job' do
@@ -17,9 +17,9 @@ RSpec.describe Enterprise::Concerns::Portal do
         end
       end
 
-      context 'when not on chatwoot cloud' do
+      context 'when not on fillnode cloud' do
         before do
-          allow(ChatwootApp).to receive(:chatwoot_cloud?).and_return(false)
+          allow(FillnodeApp).to receive(:fillnode_cloud?).and_return(false)
         end
 
         it 'does not enqueue cloudflare verification job' do
@@ -32,7 +32,7 @@ RSpec.describe Enterprise::Concerns::Portal do
 
     context 'when custom_domain is not changed' do
       before do
-        allow(ChatwootApp).to receive(:chatwoot_cloud?).and_return(true)
+        allow(FillnodeApp).to receive(:fillnode_cloud?).and_return(true)
         portal.update(custom_domain: 'test.example.com')
       end
 
@@ -45,7 +45,7 @@ RSpec.describe Enterprise::Concerns::Portal do
 
     context 'when custom_domain is set to blank' do
       before do
-        allow(ChatwootApp).to receive(:chatwoot_cloud?).and_return(true)
+        allow(FillnodeApp).to receive(:fillnode_cloud?).and_return(true)
         portal.update(custom_domain: 'test.example.com')
       end
 

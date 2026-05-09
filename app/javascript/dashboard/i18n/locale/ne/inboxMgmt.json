@@ -16,7 +16,7 @@
     "CREATE_FLOW": {
       "CHANNEL": {
         "TITLE": "च्यानल छान्नुहोस्",
-        "BODY": "तपाईंले Chatwoot सँग एकीकृत गर्न चाहनुभएको प्रदायक छान्नुहोस्।"
+        "BODY": "तपाईंले Fillnode सँग एकीकृत गर्न चाहनुभएको प्रदायक छान्नुहोस्।"
       },
       "INBOX": {
         "TITLE": "इनबक्स सिर्जना गर्नुहोस्",
@@ -42,7 +42,7 @@
         "PLACEHOLDER": "तपाईंको वेबसाइट नाम प्रविष्ट गर्नुहोस् (जस्तै: Acme Inc)"
       },
       "FB": {
-        "HELP": "PS: साइन इन गर्दा, हामीले तपाईंको पेजका सन्देशहरूमा मात्र पहुँच पाउँछौं। तपाईंका निजी सन्देशहरू कहिल्यै Chatwoot द्वारा पहुँचयोग्य हुँदैनन्।",
+        "HELP": "PS: साइन इन गर्दा, हामीले तपाईंको पेजका सन्देशहरूमा मात्र पहुँच पाउँछौं। तपाईंका निजी सन्देशहरू कहिल्यै Fillnode द्वारा पहुँचयोग्य हुँदैनन्।",
         "CHOOSE_PAGE": "पेज चयन गर्नु",
         "CHOOSE_PLACEHOLDER": "सूचीबाट पेज चयन गर्नु",
         "INBOX_NAME": "इनबक्स नाम",
@@ -449,7 +449,7 @@
       },
       "AUTH": {
         "TITLE": "च्यानल छान्नुहोस्",
-        "DESC": "Chatwoot supports live-chat widgets, Facebook Messenger, Twitter profiles, WhatsApp, Emails, etc., as channels. If you want to build a custom channel, you can create it using the API channel. To get started, choose one of the channels below.",
+        "DESC": "Fillnode supports live-chat widgets, Facebook Messenger, Twitter profiles, WhatsApp, Emails, etc., as channels. If you want to build a custom channel, you can create it using the API channel. To get started, choose one of the channels below.",
         "TITLE_NEXT": "सेटअप पूरा गर्नुहोस्",
         "TITLE_FINISH": "भोइला!",
         "CHANNEL": {
@@ -507,11 +507,11 @@
       },
       "DETAILS": {
         "TITLE": "इनबक्स विवरण",
-        "DESC": "तलको ड्रपडाउनबाट, तपाईंले Chatwoot सँग जडान गर्न चाहनुभएको Facebook पेज चयन गर्नुहोस्। तपाईंले आफ्नो इनबक्सलाई राम्रो पहिचानको लागि अनुकूल नाम पनि दिन सक्नुहुन्छ।"
+        "DESC": "तलको ड्रपडाउनबाट, तपाईंले Fillnode सँग जडान गर्न चाहनुभएको Facebook पेज चयन गर्नुहोस्। तपाईंले आफ्नो इनबक्सलाई राम्रो पहिचानको लागि अनुकूल नाम पनि दिन सक्नुहुन्छ।"
       },
       "FINISH": {
         "TITLE": "सफल भयो!",
-        "DESC": "तपाईंले सफलतापूर्वक आफ्नो Facebook पेजलाई Chatwoot सँग एकीकृत गर्न सक्नुभयो। अर्को पटक ग्राहकले तपाईंको पेजमा सन्देश पठाउँदा, संवाद स्वचालित रूपमा तपाईंको इनबक्समा देखिनेछ।<br>हामी तपाईंलाई एउटा विजेट स्क्रिप्ट पनि प्रदान गर्दैछौं जुन तपाईं सजिलै आफ्नो वेबसाइटमा थप्न सक्नुहुन्छ। यो तपाईंको वेबसाइटमा सक्रिय भएपछि, ग्राहकहरूले कुनै बाह्य उपकरणको मद्दत बिना नै तपाईंलाई सिधै वेबसाइटबाट सन्देश पठाउन सक्नेछन् र संवाद यहाँ, Chatwoot मा देखिनेछ।<br>शानदार, होइन? हामी यस्तै प्रयास गर्छौं :)"
+        "DESC": "तपाईंले सफलतापूर्वक आफ्नो Facebook पेजलाई Fillnode सँग एकीकृत गर्न सक्नुभयो। अर्को पटक ग्राहकले तपाईंको पेजमा सन्देश पठाउँदा, संवाद स्वचालित रूपमा तपाईंको इनबक्समा देखिनेछ।<br>हामी तपाईंलाई एउटा विजेट स्क्रिप्ट पनि प्रदान गर्दैछौं जुन तपाईं सजिलै आफ्नो वेबसाइटमा थप्न सक्नुहुन्छ। यो तपाईंको वेबसाइटमा सक्रिय भएपछि, ग्राहकहरूले कुनै बाह्य उपकरणको मद्दत बिना नै तपाईंलाई सिधै वेबसाइटबाट सन्देश पठाउन सक्नेछन् र संवाद यहाँ, Fillnode मा देखिनेछ।<br>शानदार, होइन? हामी यस्तै प्रयास गर्छौं :)"
       },
       "EMAIL_PROVIDER": {
         "TITLE": "तपाईंको इमेल प्रदायक चयन गर्नुहोस्।",
@@ -1123,8 +1123,8 @@
         "USER_MESSAGE": "नमस्ते",
         "AGENT_MESSAGE": "नमस्कार"
       },
-      "BRANDING_TEXT": "Chatwoot द्वारा संचालित",
-      "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
+      "BRANDING_TEXT": "Fillnode द्वारा संचालित",
+      "SCRIPT_SETTINGS": "\n      window.fillnodeSettings = {options};"
     },
     "EMAIL_PROVIDERS": {
       "MICROSOFT": {

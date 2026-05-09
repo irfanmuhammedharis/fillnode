@@ -1,0 +1,6 @@
+# give fillnode user permission to start/stop/restart fillnode systemd service
+
+%fillnode ALL=NOPASSWD: /bin/systemctl start fillnode.target
+%fillnode ALL=NOPASSWD: /bin/systemctl stop fillnode.target
+%fillnode ALL=NOPASSWD: /bin/systemctl restart fillnode.target
+%fillnode ALL=NOPASSWD: /usr/local/bin/cwctl

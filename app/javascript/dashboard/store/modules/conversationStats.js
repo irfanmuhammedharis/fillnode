@@ -1,6 +1,6 @@
 import types from '../mutation-types';
 import ConversationApi from '../../api/inbox/conversation';
-import { debounce } from '@chatwoot/utils';
+import { debounce } from '@fillnode/utils';
 
 const state = {
   mineCount: 0,

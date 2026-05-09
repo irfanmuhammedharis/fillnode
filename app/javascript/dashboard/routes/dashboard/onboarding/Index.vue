@@ -98,7 +98,7 @@ const timezoneOptions = computed(() => {
   }
 });
 
-// Best-effort match browser language to enabled Chatwoot locales.
+// Best-effort match browser language to enabled Fillnode locales.
 // Tries exact match first (e.g. 'pt_BR'), then base language (e.g. 'pt'),
 // falls back to account locale or 'en'.
 const detectBestLocale = () => {

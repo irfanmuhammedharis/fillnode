@@ -53,7 +53,7 @@ RSpec.describe 'Enterprise Portal API', type: :request do
       {  portal: {
         name: 'test_portal',
         slug: 'test_kbase',
-        custom_domain: 'https://support.chatwoot.dev'
+        custom_domain: 'https://support.fillnode.dev'
       } }
     end
 

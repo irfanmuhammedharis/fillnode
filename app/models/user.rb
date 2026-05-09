@@ -19,7 +19,7 @@
 #  message_signature      :text
 #  name                   :string           not null
 #  otp_backup_codes       :text
-#  otp_required_for_login :boolean          default(FALSE)
+#  otp_required_for_login :boolean          default(FALSE), not null
 #  otp_secret             :string
 #  provider               :string           default("email"), not null
 #  pubsub_token           :string
@@ -190,7 +190,7 @@ class User < ApplicationRecord
   end
 
   def mfa_feature_available?
-    Chatwoot.mfa_enabled?
+    Fillnode.mfa_enabled?
   end
 
   # Workaround for Devise 4.9.x race condition vulnerability (GHSA-57hq-95w6-v4fc).

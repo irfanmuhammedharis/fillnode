@@ -16,7 +16,7 @@
     "CREATE_FLOW": {
       "CHANNEL": {
         "TITLE": "Pilih Saluran",
-        "BODY": "Choose the provider you want to integrate with Chatwoot."
+        "BODY": "Choose the provider you want to integrate with Fillnode."
       },
       "INBOX": {
         "TITLE": "Buat Peti Masuk",
@@ -42,7 +42,7 @@
         "PLACEHOLDER": "Enter your website name (eg: Acme Inc)"
       },
       "FB": {
-        "HELP": "PS: By signing in, we only get access to your Page's messages. Your private messages can never be accessed by Chatwoot.",
+        "HELP": "PS: By signing in, we only get access to your Page's messages. Your private messages can never be accessed by Fillnode.",
         "CHOOSE_PAGE": "Pilih Halaman",
         "CHOOSE_PLACEHOLDER": "Pilih halaman dari senarai",
         "INBOX_NAME": "Nama Peti Masuk",
@@ -449,7 +449,7 @@
       },
       "AUTH": {
         "TITLE": "Pilih saluran",
-        "DESC": "Chatwoot supports live-chat widgets, Facebook Messenger, Twitter profiles, WhatsApp, Emails, etc., as channels. If you want to build a custom channel, you can create it using the API channel. To get started, choose one of the channels below.",
+        "DESC": "Fillnode supports live-chat widgets, Facebook Messenger, Twitter profiles, WhatsApp, Emails, etc., as channels. If you want to build a custom channel, you can create it using the API channel. To get started, choose one of the channels below.",
         "TITLE_NEXT": "Selesaikan tetapan",
         "TITLE_FINISH": "Selesai!",
         "CHANNEL": {
@@ -507,11 +507,11 @@
       },
       "DETAILS": {
         "TITLE": "Butiran Peti Masuk",
-        "DESC": "Daripada menu lungsur di bawah, pilih Halaman Facebook yang anda ingin sambungkan ke Chatwoot. Anda juga boleh memberikan nama khusus kepada peti masuk anda untuk pengenalan yang lebih baik."
+        "DESC": "Daripada menu lungsur di bawah, pilih Halaman Facebook yang anda ingin sambungkan ke Fillnode. Anda juga boleh memberikan nama khusus kepada peti masuk anda untuk pengenalan yang lebih baik."
       },
       "FINISH": {
         "TITLE": "Berjaya!",
-        "DESC": "Anda telah berjaya menyelesaikan integrasi Halaman Facebook anda dengan Chatwoot. Kali berikutnya pelanggan menghantar mesej ke Halaman anda, perbualan akan muncul secara automatik di peti masuk anda.<br>Kami juga menyediakan skrip widget yang boleh anda tambahkan dengan mudah ke laman web anda. Setelah ia aktif di laman web anda, pelanggan boleh menghantar mesej terus dari laman web tanpa menggunakan alat luaran dan perbualan akan muncul di sini, di Chatwoot.<br>Hebat, bukan? Kami memang berusaha sedemikian :)"
+        "DESC": "Anda telah berjaya menyelesaikan integrasi Halaman Facebook anda dengan Fillnode. Kali berikutnya pelanggan menghantar mesej ke Halaman anda, perbualan akan muncul secara automatik di peti masuk anda.<br>Kami juga menyediakan skrip widget yang boleh anda tambahkan dengan mudah ke laman web anda. Setelah ia aktif di laman web anda, pelanggan boleh menghantar mesej terus dari laman web tanpa menggunakan alat luaran dan perbualan akan muncul di sini, di Fillnode.<br>Hebat, bukan? Kami memang berusaha sedemikian :)"
       },
       "EMAIL_PROVIDER": {
         "TITLE": "Pilih penyedia emel anda",
@@ -1123,8 +1123,8 @@
         "USER_MESSAGE": "Hai",
         "AGENT_MESSAGE": "Hello"
       },
-      "BRANDING_TEXT": "Powered by Chatwoot",
-      "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
+      "BRANDING_TEXT": "Powered by Fillnode",
+      "SCRIPT_SETTINGS": "\n      window.fillnodeSettings = {options};"
     },
     "EMAIL_PROVIDERS": {
       "MICROSOFT": {

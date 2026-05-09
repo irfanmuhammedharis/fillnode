@@ -36,7 +36,7 @@ RSpec.describe Captain::BaseTaskService, type: :model do
 
     context 'when usage limit is exceeded' do
       before do
-        allow(ChatwootApp).to receive(:chatwoot_cloud?).and_return(true)
+        allow(FillnodeApp).to receive(:fillnode_cloud?).and_return(true)
         allow(account).to receive(:usage_limits).and_return({
                                                               captain: { responses: { current_available: 0 } }
                                                             })
@@ -116,9 +116,9 @@ RSpec.describe Captain::BaseTaskService, type: :model do
         allow(account).to receive(:feature_enabled?).with('captain_tasks').and_return(false)
       end
 
-      context 'when on Chatwoot Cloud' do
+      context 'when on Fillnode Cloud' do
         before do
-          allow(ChatwootApp).to receive(:chatwoot_cloud?).and_return(true)
+          allow(FillnodeApp).to receive(:fillnode_cloud?).and_return(true)
         end
 
         it 'returns upgrade error message' do
@@ -134,7 +134,7 @@ RSpec.describe Captain::BaseTaskService, type: :model do
 
       context 'when self-hosted' do
         before do
-          allow(ChatwootApp).to receive(:chatwoot_cloud?).and_return(false)
+          allow(FillnodeApp).to receive(:fillnode_cloud?).and_return(false)
         end
 
         it 'returns disabled error message' do

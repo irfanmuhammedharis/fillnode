@@ -8,14 +8,11 @@ import { useStore } from 'vuex';
 import { useI18n } from 'vue-i18n';
 import { useSidebarKeyboardShortcuts } from './useSidebarKeyboardShortcuts';
 import { vOnClickOutside } from '@vueuse/components';
-import { FEATURE_FLAGS } from 'dashboard/featureFlags';
 import { useWindowSize, useEventListener } from '@vueuse/core';
 
 import Button from 'dashboard/components-next/button/Button.vue';
 import SidebarGroup from './SidebarGroup.vue';
 import SidebarProfileMenu from './SidebarProfileMenu.vue';
-import SidebarChangelogCard from './SidebarChangelogCard.vue';
-import SidebarChangelogButton from './SidebarChangelogButton.vue';
 import ChannelLeaf from './ChannelLeaf.vue';
 import ChannelIcon from 'next/icon/ChannelIcon.vue';
 import SidebarAccountSwitcher from './SidebarAccountSwitcher.vue';
@@ -36,30 +33,17 @@ const emit = defineEmits([
   'closeMobileSidebar',
 ]);
 
-const { accountScopedRoute, isOnChatwootCloud } = useAccount();
+const { accountScopedRoute } = useAccount();
 const store = useStore();
 const searchShortcut = useKbd([`$mod`, 'k']);
 const { t } = useI18n();
 
-const isACustomBrandedInstance = useMapGetter(
-  'globalConfig/isACustomBrandedInstance'
-);
 const isRTL = useMapGetter('accounts/isRTL');
 
 const { width: windowWidth } = useWindowSize();
 const isMobile = computed(() => windowWidth.value < 768);
 
 const accountId = useMapGetter('getCurrentAccountId');
-const isFeatureEnabledonAccount = useMapGetter(
-  'accounts/isFeatureEnabledonAccount'
-);
-
-const hasAdvancedAssignment = computed(() => {
-  return isFeatureEnabledonAccount.value(
-    accountId.value,
-    FEATURE_FLAGS.ADVANCED_ASSIGNMENT
-  );
-});
 
 const toggleShortcutModalFn = show => {
   if (show) {
@@ -311,77 +295,6 @@ const menuItems = computed(() => {
       ],
     },
     {
-      name: 'Captain',
-      icon: 'i-woot-captain',
-      label: t('SIDEBAR.CAPTAIN'),
-      activeOn: ['captain_assistants_create_index'],
-      children: [
-        {
-          name: 'FAQs',
-          label: t('SIDEBAR.CAPTAIN_RESPONSES'),
-          activeOn: [
-            'captain_assistants_responses_index',
-            'captain_assistants_responses_pending',
-          ],
-          to: accountScopedRoute('captain_assistants_index', {
-            navigationPath: 'captain_assistants_responses_index',
-          }),
-        },
-        {
-          name: 'Documents',
-          label: t('SIDEBAR.CAPTAIN_DOCUMENTS'),
-          activeOn: ['captain_assistants_documents_index'],
-          to: accountScopedRoute('captain_assistants_index', {
-            navigationPath: 'captain_assistants_documents_index',
-          }),
-        },
-        {
-          name: 'Scenarios',
-          label: t('SIDEBAR.CAPTAIN_SCENARIOS'),
-          activeOn: ['captain_assistants_scenarios_index'],
-          to: accountScopedRoute('captain_assistants_index', {
-            navigationPath: 'captain_assistants_scenarios_index',
-          }),
-        },
-        {
-          name: 'Playground',
-          label: t('SIDEBAR.CAPTAIN_PLAYGROUND'),
-          activeOn: ['captain_assistants_playground_index'],
-          to: accountScopedRoute('captain_assistants_index', {
-            navigationPath: 'captain_assistants_playground_index',
-          }),
-        },
-        {
-          name: 'Inboxes',
-          label: t('SIDEBAR.CAPTAIN_INBOXES'),
-          activeOn: ['captain_assistants_inboxes_index'],
-          to: accountScopedRoute('captain_assistants_index', {
-            navigationPath: 'captain_assistants_inboxes_index',
-          }),
-        },
-        {
-          name: 'Tools',
-          label: t('SIDEBAR.CAPTAIN_TOOLS'),
-          activeOn: ['captain_tools_index'],
-          to: accountScopedRoute('captain_assistants_index', {
-            navigationPath: 'captain_tools_index',
-          }),
-        },
-        {
-          name: 'Settings',
-          label: t('SIDEBAR.CAPTAIN_SETTINGS'),
-          activeOn: [
-            'captain_assistants_settings_index',
-            'captain_assistants_guidelines_index',
-            'captain_assistants_guardrails_index',
-          ],
-          to: accountScopedRoute('captain_assistants_index', {
-            navigationPath: 'captain_assistants_settings_index',
-          }),
-        },
-      ],
-    },
-    {
       name: 'Contacts',
       label: t('SIDEBAR.CONTACTS'),
       icon: 'i-lucide-contact',
@@ -445,23 +358,6 @@ const menuItems = computed(() => {
       ],
     },
     {
-      name: 'Companies',
-      label: t('SIDEBAR.COMPANIES'),
-      icon: 'i-lucide-building-2',
-      children: [
-        {
-          name: 'All Companies',
-          label: t('SIDEBAR.ALL_COMPANIES'),
-          to: accountScopedRoute(
-            'companies_dashboard_index',
-            {},
-            { page: 1, search: undefined }
-          ),
-          activeOn: ['companies_dashboard_index'],
-        },
-      ],
-    },
-    {
       name: 'Reports',
       label: t('SIDEBAR.REPORTS'),
       icon: 'i-lucide-chart-spline',
@@ -481,16 +377,6 @@ const menuItems = computed(() => {
           name: 'Reports CSAT',
           label: t('SIDEBAR.CSAT'),
           to: accountScopedRoute('csat_reports'),
-        },
-        {
-          name: 'Reports SLA',
-          label: t('SIDEBAR.REPORTS_SLA'),
-          to: accountScopedRoute('sla_reports'),
-        },
-        {
-          name: 'Reports Bot',
-          label: t('SIDEBAR.REPORTS_BOT'),
-          to: accountScopedRoute('bot_reports'),
         },
       ],
     },
@@ -602,25 +488,6 @@ const menuItems = computed(() => {
           ],
           to: accountScopedRoute('settings_teams_list'),
         },
-        ...(hasAdvancedAssignment.value
-          ? [
-              {
-                name: 'Settings Agent Assignment',
-                label: t('SIDEBAR.AGENT_ASSIGNMENT'),
-                icon: 'i-lucide-user-cog',
-                activeOn: [
-                  'assignment_policy_index',
-                  'agent_assignment_policy_index',
-                  'agent_assignment_policy_create',
-                  'agent_assignment_policy_edit',
-                  'agent_capacity_policy_index',
-                  'agent_capacity_policy_create',
-                  'agent_capacity_policy_edit',
-                ],
-                to: accountScopedRoute('assignment_policy_index'),
-              },
-            ]
-          : []),
         {
           name: 'Settings Inboxes',
           label: t('SIDEBAR.INBOXES'),
@@ -678,24 +545,6 @@ const menuItems = computed(() => {
           to: accountScopedRoute('settings_applications'),
         },
         {
-          name: 'Settings Audit Logs',
-          label: t('SIDEBAR.AUDIT_LOGS'),
-          icon: 'i-lucide-briefcase',
-          to: accountScopedRoute('auditlogs_list'),
-        },
-        {
-          name: 'Settings Custom Roles',
-          label: t('SIDEBAR.CUSTOM_ROLES'),
-          icon: 'i-lucide-shield-plus',
-          to: accountScopedRoute('custom_roles_list'),
-        },
-        {
-          name: 'Settings Sla',
-          label: t('SIDEBAR.SLA'),
-          icon: 'i-lucide-clock-alert',
-          to: accountScopedRoute('sla_list'),
-        },
-        {
           name: 'Conversation Workflow',
           label: t('SIDEBAR.CONVERSATION_WORKFLOW'),
           icon: 'i-lucide-workflow',
@@ -706,12 +555,6 @@ const menuItems = computed(() => {
           label: t('SIDEBAR.SECURITY'),
           icon: 'i-lucide-shield',
           to: accountScopedRoute('security_settings_index'),
-        },
-        {
-          name: 'Settings Billing',
-          label: t('SIDEBAR.BILLING'),
-          icon: 'i-lucide-credit-card',
-          to: accountScopedRoute('billing_settings_index'),
         },
       ],
     },
@@ -835,20 +678,6 @@ const menuItems = computed(() => {
     >
       <div
         class="pointer-events-none absolute inset-x-0 -top-[1.938rem] h-8 bg-gradient-to-t from-n-background to-transparent"
-      />
-      <SidebarChangelogCard
-        v-if="
-          isOnChatwootCloud &&
-          !isACustomBrandedInstance &&
-          !isEffectivelyCollapsed
-        "
-      />
-      <SidebarChangelogButton
-        v-if="
-          isOnChatwootCloud &&
-          !isACustomBrandedInstance &&
-          isEffectivelyCollapsed
-        "
       />
       <div
         class="px-1 py-1.5 flex-shrink-0 flex w-full z-50 gap-2 items-center border-t border-n-weak shadow-[0px_-2px_4px_0px_rgba(27,28,29,0.02)]"

@@ -3,7 +3,7 @@ import { useAlert } from 'dashboard/composables';
 import { useI18n } from 'vue-i18n';
 import { DirectUpload } from 'activestorage';
 import { checkFileSizeLimit } from 'shared/helpers/FileHelper';
-import { getMaxUploadSizeByChannel } from '@chatwoot/utils';
+import { getMaxUploadSizeByChannel } from '@fillnode/utils';
 import {
   DEFAULT_MAXIMUM_FILE_UPLOAD_SIZE,
   resolveMaximumFileUploadSize,

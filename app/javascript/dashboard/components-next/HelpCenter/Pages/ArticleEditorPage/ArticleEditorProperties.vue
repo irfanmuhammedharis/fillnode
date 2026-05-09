@@ -1,7 +1,7 @@
 <script setup>
 import { reactive, watch, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { debounce } from '@chatwoot/utils';
+import { debounce } from '@fillnode/utils';
 
 import InlineInput from 'dashboard/components-next/inline-input/InlineInput.vue';
 import TextArea from 'dashboard/components-next/textarea/TextArea.vue';

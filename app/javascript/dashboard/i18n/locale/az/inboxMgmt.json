@@ -16,7 +16,7 @@
     "CREATE_FLOW": {
       "CHANNEL": {
         "TITLE": "Kanal seçin",
-        "BODY": "Chatwoot ilə inteqrasiya etmək istədiyiniz təminatçını seçin."
+        "BODY": "Fillnode ilə inteqrasiya etmək istədiyiniz təminatçını seçin."
       },
       "INBOX": {
         "TITLE": "Poçt qutusu yaradın",
@@ -42,7 +42,7 @@
         "PLACEHOLDER": "Veb sayt adınızı daxil edin (məsələn: Acme Inc)"
       },
       "FB": {
-        "HELP": "Qeyd: Daxil olmaqla, yalnız Səhifənizin mesajlarına giriş əldə edirik. Şəxsi mesajlarınıza Chatwoot heç vaxt daxil ola bilməz.",
+        "HELP": "Qeyd: Daxil olmaqla, yalnız Səhifənizin mesajlarına giriş əldə edirik. Şəxsi mesajlarınıza Fillnode heç vaxt daxil ola bilməz.",
         "CHOOSE_PAGE": "Səhifə seçin",
         "CHOOSE_PLACEHOLDER": "Siyahıdan səhifə seçin",
         "INBOX_NAME": "Gələn Qutu Adı",
@@ -449,7 +449,7 @@
       },
       "AUTH": {
         "TITLE": "Kanal seçin",
-        "DESC": "Chatwoot canlı söhbət widgetları, Facebook Messenger, WhatsApp, E-poçtlar və s. kimi kanalları dəstəkləyir. Özəl kanal yaratmaq istəyirsinizsə, API kanalı vasitəsilə yarada bilərsiniz. Başlamaq üçün aşağıdakı kanallardan birini seçin.",
+        "DESC": "Fillnode canlı söhbət widgetları, Facebook Messenger, WhatsApp, E-poçtlar və s. kimi kanalları dəstəkləyir. Özəl kanal yaratmaq istəyirsinizsə, API kanalı vasitəsilə yarada bilərsiniz. Başlamaq üçün aşağıdakı kanallardan birini seçin.",
         "TITLE_NEXT": "Qurulumu tamamlayın",
         "TITLE_FINISH": "Budur!",
         "CHANNEL": {
@@ -507,11 +507,11 @@
       },
       "DETAILS": {
         "TITLE": "Gələn Qutu Detalları",
-        "DESC": "Aşağıdakı açılan siyahıdan Chatwoot-a qoşmaq istədiyiniz Facebook Səhifəsini seçin. Gələn qutunu daha yaxşı tanımaq üçün ona xüsusi ad da verə bilərsiniz."
+        "DESC": "Aşağıdakı açılan siyahıdan Fillnode-a qoşmaq istədiyiniz Facebook Səhifəsini seçin. Gələn qutunu daha yaxşı tanımaq üçün ona xüsusi ad da verə bilərsiniz."
       },
       "FINISH": {
         "TITLE": "Uğurla tamamlandı!",
-        "DESC": "Facebook Səhifənizi Chatwoot ilə uğurla inteqrasiya etdiniz. Növbəti dəfə müştəri Səhifənizə mesaj göndərdikdə, söhbət avtomatik olaraq gələn qutunuzda görünəcək.<br>Həmçinin, veb saytınıza asanlıqla əlavə edə biləcəyiniz vidjet skripti təqdim edirik. Bu skript veb saytınızda aktiv olduqda, müştərilər xarici vasitə olmadan birbaşa veb saytınızdan sizə mesaj göndərə biləcək və söhbət burada, Chatwoot-da görünəcək.<br>Gözəl, deyilmi? Biz də çalışırıq :)"
+        "DESC": "Facebook Səhifənizi Fillnode ilə uğurla inteqrasiya etdiniz. Növbəti dəfə müştəri Səhifənizə mesaj göndərdikdə, söhbət avtomatik olaraq gələn qutunuzda görünəcək.<br>Həmçinin, veb saytınıza asanlıqla əlavə edə biləcəyiniz vidjet skripti təqdim edirik. Bu skript veb saytınızda aktiv olduqda, müştərilər xarici vasitə olmadan birbaşa veb saytınızdan sizə mesaj göndərə biləcək və söhbət burada, Fillnode-da görünəcək.<br>Gözəl, deyilmi? Biz də çalışırıq :)"
       },
       "EMAIL_PROVIDER": {
         "TITLE": "E-poçt provayderinizi seçin",
@@ -1123,8 +1123,8 @@
         "USER_MESSAGE": "Salam",
         "AGENT_MESSAGE": "Salam"
       },
-      "BRANDING_TEXT": "Powered by Chatwoot",
-      "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
+      "BRANDING_TEXT": "Powered by Fillnode",
+      "SCRIPT_SETTINGS": "\n      window.fillnodeSettings = {options};"
     },
     "EMAIL_PROVIDERS": {
       "MICROSOFT": {

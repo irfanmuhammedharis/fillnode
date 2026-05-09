@@ -11,7 +11,7 @@ describe Enterprise::Billing::HandleStripeEventService do
   before do
     # Create cloud plans configuration
     create(:installation_config, {
-             name: 'CHATWOOT_CLOUD_PLANS',
+             name: 'FILLNODE_CLOUD_PLANS',
              value: [
                { 'name' => 'Hacker', 'product_id' => ['plan_id_hacker'], 'price_ids' => ['price_hacker'] },
                { 'name' => 'Startups', 'product_id' => ['plan_id_startups'], 'price_ids' => ['price_startups'] },

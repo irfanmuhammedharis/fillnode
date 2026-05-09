@@ -22,15 +22,15 @@ importers:
       '@breezystack/lamejs':
         specifier: ^1.2.7
         version: 1.2.7
-      '@chatwoot/ninja-keys':
-        specifier: 1.2.3
-        version: 1.2.3
-      '@chatwoot/prosemirror-schema':
-        specifier: 1.3.10
-        version: 1.3.10
-      '@chatwoot/utils':
-        specifier: ^0.0.52
-        version: 0.0.52
+      '@fillnode/ninja-keys':
+        specifier: file:./packages/ninja-keys
+        version: file:packages/ninja-keys
+      '@fillnode/prosemirror-schema':
+        specifier: file:./packages/prosemirror-schema
+        version: file:packages/prosemirror-schema
+      '@fillnode/utils':
+        specifier: file:./packages/utils
+        version: file:packages/utils
       '@formkit/core':
         specifier: ^1.7.2
         version: 1.7.2
@@ -338,6 +338,9 @@ importers:
       postcss:
         specifier: ^8.4.47
         version: 8.4.47
+      postcss-import:
+        specifier: ^16.1.1
+        version: 16.1.1(postcss@8.4.47)
       postcss-preset-env:
         specifier: ^8.5.1
         version: 8.5.1(postcss@8.4.47)
@@ -456,16 +459,6 @@ packages:
 
   '@breezystack/lamejs@1.2.7':
     resolution: {integrity: sha512-6wc7ck65ctA75Hq7FYHTtTvGnYs6msgdxiSUICQ+A01nVOWg6rqouZB8IdyteRlfpYYiFovkf67dIeOgWIUzTA==}
-
-  '@chatwoot/ninja-keys@1.2.3':
-    resolution: {integrity: sha512-xM8d9P5ikDMZm2WbaCTk/TW5HFauylrU3cJ75fq5je6ixKwyhl/0kZbVN/vbbZN4+AUX/OaSIn6IJbtCgIF67g==}
-
-  '@chatwoot/prosemirror-schema@1.3.10':
-    resolution: {integrity: sha512-MtOXqFPHptFHu/AoIPhQ9TskVXOxOXCgBY/tgAtCAQRut978F7I3QxozQBECBz83ubsoXnBecpNjGNq0OPgONw==}
-
-  '@chatwoot/utils@0.0.52':
-    resolution: {integrity: sha512-e57uVqyVW4tj1gql4YJPNMykqMJPkETn5Y9AmHdhc6Y7oxDXfRXBq27fZrrDadLkZdn5RYVCZjfIhXOumyYv2Q==}
-    engines: {node: '>=10'}
 
   '@codemirror/commands@6.7.0':
     resolution: {integrity: sha512-+cduIZ2KbesDhbykV02K25A5xIVrquSPz4UxxYBemRlAT2aW8dhwUgLDwej7q/RJUHKk4nALYcR1puecDvbdqw==}
@@ -870,6 +863,16 @@ packages:
   '@eslint/js@8.57.0':
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  '@fillnode/ninja-keys@file:packages/ninja-keys':
+    resolution: {directory: packages/ninja-keys, type: directory}
+
+  '@fillnode/prosemirror-schema@file:packages/prosemirror-schema':
+    resolution: {directory: packages/prosemirror-schema, type: directory}
+
+  '@fillnode/utils@file:packages/utils':
+    resolution: {directory: packages/utils, type: directory}
+    engines: {node: '>=10'}
 
   '@floating-ui/core@1.6.7':
     resolution: {integrity: sha512-yDzVT/Lm101nQ5TCVeK65LtdN7Tj4Qpr9RTXJ2vPFLqtLxwOrpoxAHAJI8J3yYWUc40J0BDBheaitK5SJmno2g==}
@@ -3687,6 +3690,12 @@ packages:
     peerDependencies:
       postcss: ^8.0.0
 
+  postcss-import@16.1.1:
+    resolution: {integrity: sha512-2xVS1NCZAfjtVdvXiyegxzJ447GyqCeEI5V7ApgQVOWnros1p5lGNovJNapwPpMombyFBfqDwt7AD3n2l0KOfQ==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      postcss: ^8.0.0
+
   postcss-initial@4.0.1:
     resolution: {integrity: sha512-0ueD7rPqX8Pn1xJIjay0AZeIuDoF+V+VvMt/uOnn+4ezUKhZM/NokDeP6DwMNyIoYByuN/94IQnt5FEkaN59xQ==}
     peerDependencies:
@@ -4970,34 +4979,6 @@ snapshots:
 
   '@breezystack/lamejs@1.2.7': {}
 
-  '@chatwoot/ninja-keys@1.2.3':
-    dependencies:
-      '@material/mwc-icon': 0.25.3
-      hotkeys-js: 3.8.7
-      lit: 2.2.6
-
-  '@chatwoot/prosemirror-schema@1.3.10':
-    dependencies:
-      markdown-it-sup: 2.0.0
-      prosemirror-commands: 1.7.1
-      prosemirror-dropcursor: 1.8.1
-      prosemirror-gapcursor: 1.3.2
-      prosemirror-history: 1.4.1
-      prosemirror-inputrules: 1.4.0
-      prosemirror-keymap: 1.2.2
-      prosemirror-markdown: 1.13.0
-      prosemirror-menu: 1.2.4
-      prosemirror-model: 1.22.3
-      prosemirror-schema-list: 1.5.1
-      prosemirror-state: 1.4.3
-      prosemirror-tables: 1.5.0
-      prosemirror-utils: 1.2.2(prosemirror-model@1.22.3)(prosemirror-state@1.4.3)
-      prosemirror-view: 1.34.1
-
-  '@chatwoot/utils@0.0.52':
-    dependencies:
-      date-fns: 2.30.0
-
   '@codemirror/commands@6.7.0':
     dependencies:
       '@codemirror/language': 6.10.3
@@ -5349,6 +5330,34 @@ snapshots:
       - supports-color
 
   '@eslint/js@8.57.0': {}
+
+  '@fillnode/ninja-keys@file:packages/ninja-keys':
+    dependencies:
+      '@material/mwc-icon': 0.25.3
+      hotkeys-js: 3.8.7
+      lit: 2.2.6
+
+  '@fillnode/prosemirror-schema@file:packages/prosemirror-schema':
+    dependencies:
+      markdown-it-sup: 2.0.0
+      prosemirror-commands: 1.7.1
+      prosemirror-dropcursor: 1.8.1
+      prosemirror-gapcursor: 1.3.2
+      prosemirror-history: 1.4.1
+      prosemirror-inputrules: 1.4.0
+      prosemirror-keymap: 1.2.2
+      prosemirror-markdown: 1.13.0
+      prosemirror-menu: 1.2.4
+      prosemirror-model: 1.22.3
+      prosemirror-schema-list: 1.5.1
+      prosemirror-state: 1.4.3
+      prosemirror-tables: 1.5.0
+      prosemirror-utils: 1.2.2(prosemirror-model@1.22.3)(prosemirror-state@1.4.3)
+      prosemirror-view: 1.34.1
+
+  '@fillnode/utils@file:packages/utils':
+    dependencies:
+      date-fns: 2.30.0
 
   '@floating-ui/core@1.6.7':
     dependencies:
@@ -8543,6 +8552,13 @@ snapshots:
       read-cache: 1.0.0
       resolve: 1.22.8
 
+  postcss-import@16.1.1(postcss@8.4.47):
+    dependencies:
+      postcss: 8.4.47
+      postcss-value-parser: 4.2.0
+      read-cache: 1.0.0
+      resolve: 1.22.8
+
   postcss-initial@4.0.1(postcss@8.4.47):
     dependencies:
       postcss: 8.4.47
@@ -8723,7 +8739,7 @@ snapshots:
   prosemirror-dropcursor@1.8.1:
     dependencies:
       prosemirror-state: 1.4.3
-      prosemirror-transform: 1.10.0
+      prosemirror-transform: 1.12.0
       prosemirror-view: 1.34.1
 
   prosemirror-gapcursor@1.3.2:
@@ -8736,14 +8752,14 @@ snapshots:
   prosemirror-history@1.4.1:
     dependencies:
       prosemirror-state: 1.4.3
-      prosemirror-transform: 1.10.0
+      prosemirror-transform: 1.12.0
       prosemirror-view: 1.34.1
       rope-sequence: 1.3.2
 
   prosemirror-inputrules@1.4.0:
     dependencies:
       prosemirror-state: 1.4.3
-      prosemirror-transform: 1.10.0
+      prosemirror-transform: 1.12.0
 
   prosemirror-keymap@1.2.2:
     dependencies:
@@ -8783,7 +8799,7 @@ snapshots:
       prosemirror-keymap: 1.2.2
       prosemirror-model: 1.22.3
       prosemirror-state: 1.4.3
-      prosemirror-transform: 1.10.0
+      prosemirror-transform: 1.12.0
       prosemirror-view: 1.34.1
 
   prosemirror-transform@1.10.0:

@@ -164,7 +164,7 @@ RSpec.describe Captain::ConversationCompletionService do
       end
 
       before do
-        allow(ChatwootApp).to receive(:chatwoot_cloud?).and_return(true)
+        allow(FillnodeApp).to receive(:fillnode_cloud?).and_return(true)
         allow(account).to receive(:usage_limits).and_return({
                                                               captain: { responses: { current_available: 0 } }
                                                             })

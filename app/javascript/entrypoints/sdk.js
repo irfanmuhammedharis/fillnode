@@ -19,7 +19,7 @@ import { setCookieWithDomain } from '../sdk/cookieHelpers';
 import { SDK_SET_BUBBLE_VISIBILITY } from 'shared/constants/sharedFrameEvents';
 
 const runSDK = ({ baseUrl, websiteToken }) => {
-  if (window.$chatwoot) {
+  if (window.$fillnode) {
     return;
   }
 
@@ -47,38 +47,38 @@ const runSDK = ({ baseUrl, websiteToken }) => {
     restoreWidgetInDOM(event.newDocument.body)
   );
 
-  const chatwootSettings = window.chatwootSettings || {};
-  let locale = chatwootSettings.locale;
-  let baseDomain = chatwootSettings.baseDomain;
+  const fillnodeSettings = window.fillnodeSettings || {};
+  let locale = fillnodeSettings.locale;
+  let baseDomain = fillnodeSettings.baseDomain;
 
-  if (chatwootSettings.useBrowserLanguage) {
+  if (fillnodeSettings.useBrowserLanguage) {
     locale = window.navigator.language.replace('-', '_');
   }
 
-  window.$chatwoot = {
+  window.$fillnode = {
     baseUrl,
     baseDomain,
     hasLoaded: false,
-    hideMessageBubble: chatwootSettings.hideMessageBubble || false,
+    hideMessageBubble: fillnodeSettings.hideMessageBubble || false,
     isOpen: false,
-    position: chatwootSettings.position === 'left' ? 'left' : 'right',
+    position: fillnodeSettings.position === 'left' ? 'left' : 'right',
     websiteToken,
     locale,
-    useBrowserLanguage: chatwootSettings.useBrowserLanguage || false,
-    type: getBubbleView(chatwootSettings.type),
-    launcherTitle: chatwootSettings.launcherTitle || '',
-    showPopoutButton: chatwootSettings.showPopoutButton || false,
-    showUnreadMessagesDialog: chatwootSettings.showUnreadMessagesDialog ?? true,
-    widgetStyle: getWidgetStyle(chatwootSettings.widgetStyle) || 'standard',
+    useBrowserLanguage: fillnodeSettings.useBrowserLanguage || false,
+    type: getBubbleView(fillnodeSettings.type),
+    launcherTitle: fillnodeSettings.launcherTitle || '',
+    showPopoutButton: fillnodeSettings.showPopoutButton || false,
+    showUnreadMessagesDialog: fillnodeSettings.showUnreadMessagesDialog ?? true,
+    widgetStyle: getWidgetStyle(fillnodeSettings.widgetStyle) || 'standard',
     resetTriggered: false,
-    darkMode: getDarkMode(chatwootSettings.darkMode),
-    welcomeTitle: chatwootSettings.welcomeTitle || '',
-    welcomeDescription: chatwootSettings.welcomeDescription || '',
-    availableMessage: chatwootSettings.availableMessage || '',
-    unavailableMessage: chatwootSettings.unavailableMessage || '',
-    enableFileUpload: chatwootSettings.enableFileUpload,
-    enableEmojiPicker: chatwootSettings.enableEmojiPicker ?? true,
-    enableEndConversation: chatwootSettings.enableEndConversation ?? true,
+    darkMode: getDarkMode(fillnodeSettings.darkMode),
+    welcomeTitle: fillnodeSettings.welcomeTitle || '',
+    welcomeDescription: fillnodeSettings.welcomeDescription || '',
+    availableMessage: fillnodeSettings.availableMessage || '',
+    unavailableMessage: fillnodeSettings.unavailableMessage || '',
+    enableFileUpload: fillnodeSettings.enableFileUpload,
+    enableEmojiPicker: fillnodeSettings.enableEmojiPicker ?? true,
+    enableEndConversation: fillnodeSettings.enableEndConversation ?? true,
 
     toggle(state) {
       IFrameHelper.events.toggleBubble(state);
@@ -90,21 +90,21 @@ const runSDK = ({ baseUrl, websiteToken }) => {
       if (visibility === 'hide') {
         addClasses(widgetHolder, 'woot-widget--without-bubble');
         addClasses(widgetElm, 'woot-hidden');
-        window.$chatwoot.hideMessageBubble = true;
+        window.$fillnode.hideMessageBubble = true;
       } else if (visibility === 'show') {
         removeClasses(widgetElm, 'woot-hidden');
         removeClasses(widgetHolder, 'woot-widget--without-bubble');
-        window.$chatwoot.hideMessageBubble = false;
+        window.$fillnode.hideMessageBubble = false;
       }
       IFrameHelper.sendMessage(SDK_SET_BUBBLE_VISIBILITY, {
-        hideMessageBubble: window.$chatwoot.hideMessageBubble,
+        hideMessageBubble: window.$fillnode.hideMessageBubble,
       });
     },
 
     popoutChatWindow() {
       IFrameHelper.events.popoutChatWindow({
-        baseUrl: window.$chatwoot.baseUrl,
-        websiteToken: window.$chatwoot.websiteToken,
+        baseUrl: window.$fillnode.baseUrl,
+        websiteToken: window.$fillnode.websiteToken,
         locale,
       });
     },
@@ -127,8 +127,8 @@ const runSDK = ({ baseUrl, websiteToken }) => {
         return;
       }
 
-      window.$chatwoot.identifier = identifier;
-      window.$chatwoot.user = user;
+      window.$fillnode.identifier = identifier;
+      window.$fillnode.user = user;
       IFrameHelper.sendMessage('set-user', { identifier, user });
 
       setCookieWithDomain(userCookieName, hashToBeStored, {
@@ -193,7 +193,7 @@ const runSDK = ({ baseUrl, websiteToken }) => {
     },
 
     reset() {
-      if (window.$chatwoot.isOpen) {
+      if (window.$fillnode.isOpen) {
         IFrameHelper.events.toggleBubble();
       }
 
@@ -202,11 +202,11 @@ const runSDK = ({ baseUrl, websiteToken }) => {
 
       const iframe = IFrameHelper.getAppFrame();
       iframe.src = IFrameHelper.getUrl({
-        baseUrl: window.$chatwoot.baseUrl,
-        websiteToken: window.$chatwoot.websiteToken,
+        baseUrl: window.$fillnode.baseUrl,
+        websiteToken: window.$fillnode.websiteToken,
       });
 
-      window.$chatwoot.resetTriggered = true;
+      window.$fillnode.resetTriggered = true;
     },
   };
 
@@ -216,6 +216,6 @@ const runSDK = ({ baseUrl, websiteToken }) => {
   });
 };
 
-window.chatwootSDK = {
+window.fillnodeSDK = {
   run: runSDK,
 };

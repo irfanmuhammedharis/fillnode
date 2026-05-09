@@ -3,7 +3,7 @@ import { ref, computed, defineModel, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useToggle } from '@vueuse/core';
 import { vOnClickOutside } from '@vueuse/components';
-import { debounce } from '@chatwoot/utils';
+import { debounce } from '@fillnode/utils';
 import { useMapGetter } from 'dashboard/composables/store.js';
 import { createContactSearcher } from 'dashboard/components-next/NewConversation/helpers/composeConversationHelper';
 import { useCamelCase } from 'dashboard/composables/useTransformKeys';

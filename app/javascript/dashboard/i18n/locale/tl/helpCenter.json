@@ -419,7 +419,7 @@
         "SLUG": {
           "LABEL": "Slug",
           "PLACEHOLDER": "Slug ng kategorya para sa mga url",
-          "HELP_TEXT": "app.chatwoot.com/hc/my-portal/en-US/categories/my-slug",
+          "HELP_TEXT": "app.fillnode.com/hc/my-portal/en-US/categories/my-slug",
           "ERROR": "Kinakailangan ang slug"
         },
         "DESCRIPTION": {
@@ -450,7 +450,7 @@
         "SLUG": {
           "LABEL": "Slug",
           "PLACEHOLDER": "Slug ng kategorya para sa mga url",
-          "HELP_TEXT": "app.chatwoot.com/hc/my-portal/en-US/categories/my-slug",
+          "HELP_TEXT": "app.fillnode.com/hc/my-portal/en-US/categories/my-slug",
           "ERROR": "Kinakailangan ang slug"
         },
         "DESCRIPTION": {
@@ -634,7 +634,7 @@
             "LABEL": "Slug",
             "PLACEHOLDER": "Slug ng kategorya para sa mga url",
             "ERROR": "Kinakailangan ang slug",
-            "HELP_TEXT": "app.chatwoot.com/hc/{portalSlug}/{localeCode}/categories/{categorySlug}"
+            "HELP_TEXT": "app.fillnode.com/hc/{portalSlug}/{localeCode}/categories/{categorySlug}"
           },
           "DESCRIPTION": {
             "LABEL": "Paglalarawan",
@@ -727,7 +727,7 @@
       "CONFIRM_BUTTON_LABEL": "Gumawa",
       "NAME": {
         "LABEL": "Pangalan",
-        "PLACEHOLDER": "Gabay ng Gumagamit | Chatwoot",
+        "PLACEHOLDER": "Gabay ng Gumagamit | Fillnode",
         "MESSAGE": "Pumili ng pangalan para sa iyong portal.",
         "ERROR": "Kinakailangan ang pangalan"
       },
@@ -807,7 +807,7 @@
           },
           "DNS_CONFIGURATION_DIALOG": {
             "HEADER": "DNS na pagsasaayos",
-            "DESCRIPTION": "Mag-login sa iyong account sa DNS provider, at magdagdag ng CNAME record para sa subdomain na ituturo sa chatwoot.help",
+            "DESCRIPTION": "Mag-login sa iyong account sa DNS provider, at magdagdag ng CNAME record para sa subdomain na ituturo sa fillnode.help",
             "COPY": "Matagumpay na nakopya ang CNAME",
             "SEND_INSTRUCTIONS": {
               "HEADER": "Ipadala ang mga tagubilin",

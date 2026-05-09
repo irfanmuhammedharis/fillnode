@@ -46,7 +46,7 @@
  * 2. Nested properties in additional_attributes (browser_language, referer, etc.)
  * 3. Nested properties in custom_attributes (conversation_type, etc.)
  */
-import { coerceToDate } from '@chatwoot/utils';
+import { coerceToDate } from '@fillnode/utils';
 import jsonLogic from 'json-logic-js';
 
 /**

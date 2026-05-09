@@ -1,6 +1,6 @@
 <script>
 import { mapGetters } from 'vuex';
-import { getContrastingTextColor } from '@chatwoot/utils';
+import { getContrastingTextColor } from '@fillnode/utils';
 import { IFrameHelper } from 'widget/helpers/utils';
 
 export default {

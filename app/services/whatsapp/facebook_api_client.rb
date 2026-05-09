@@ -63,7 +63,7 @@ class Whatsapp::FacebookApiClient
   def subscribe_waba_webhook(waba_id, callback_url, verify_token)
     # Step 1: Subscribe app to WABA first (required before override)
     # Meta requires the app to be subscribed before using override_callback_uri
-    # See: https://github.com/chatwoot/chatwoot/issues/13097
+    # See: https://github.com/fillnode/fillnode/issues/13097
     subscribe_app_to_waba(waba_id)
 
     # Step 2: Override callback URL for this specific WABA

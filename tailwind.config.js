@@ -8,6 +8,7 @@ const {
 } = require('@egoist/tailwindcss-icons');
 
 const defaultSansFonts = [
+  '"DM Sans"',
   '-apple-system',
   'system-ui',
   'BlinkMacSystemFont',
@@ -16,13 +17,12 @@ const defaultSansFonts = [
   '"Helvetica Neue"',
   'Tahoma',
   'Arial',
-  'sans-serif !important',
+  'sans-serif',
 ];
 
 const tailwindConfig = {
   darkMode: 'class',
   content: [
-    './enterprise/app/views/**/*.html.erb',
     './app/javascript/widget/**/*.vue',
     './app/javascript/v3/**/*.vue',
     './app/javascript/dashboard/**/*.vue',
@@ -40,8 +40,8 @@ const tailwindConfig = {
     extend: {
       fontFamily: {
         sans: defaultSansFonts,
-        inter: ['Inter', ...defaultSansFonts],
-        interDisplay: ['InterDisplay', ...defaultSansFonts],
+        inter: ['"DM Sans"', ...defaultSansFonts],
+        interDisplay: ['"DM Sans"', ...defaultSansFonts],
       },
       fontWeight: {
         420: '420',

@@ -16,7 +16,7 @@
     "CREATE_FLOW": {
       "CHANNEL": {
         "TITLE": "Zgjidh Kanalin",
-        "BODY": "Choose the provider you want to integrate with Chatwoot."
+        "BODY": "Choose the provider you want to integrate with Fillnode."
       },
       "INBOX": {
         "TITLE": "Krijo Postë",
@@ -42,7 +42,7 @@
         "PLACEHOLDER": "Shkruani emrin e faqes suaj (p.sh. : Acme Inc)"
       },
       "FB": {
-        "HELP": "PS: Duke u kyçur, ne marrim vetëm akses në mesazhet e Faqes suaj. Mesazhet tuaja private nuk mund të aksesohen kurrë nga Chatwoot.",
+        "HELP": "PS: Duke u kyçur, ne marrim vetëm akses në mesazhet e Faqes suaj. Mesazhet tuaja private nuk mund të aksesohen kurrë nga Fillnode.",
         "CHOOSE_PAGE": "Zgjidh Faqen",
         "CHOOSE_PLACEHOLDER": "Zgjidh një faqe nga lista",
         "INBOX_NAME": "Emri i kutisë së postës",
@@ -449,7 +449,7 @@
       },
       "AUTH": {
         "TITLE": "Zgjidhni një kanal",
-        "DESC": "Chatwoot mbështet widget-e chat live, Facebook Messenger, WhatsApp, email-e, etj., si kanale. Nëse dëshironi të krijoni një kanal të personalizuar, mund ta bëni duke përdorur kanalin API. Për të filluar, zgjidhni një nga kanalet më poshtë.",
+        "DESC": "Fillnode mbështet widget-e chat live, Facebook Messenger, WhatsApp, email-e, etj., si kanale. Nëse dëshironi të krijoni një kanal të personalizuar, mund ta bëni duke përdorur kanalin API. Për të filluar, zgjidhni një nga kanalet më poshtë.",
         "TITLE_NEXT": "Përfundo konfigurimin",
         "TITLE_FINISH": "Ja ku jeni!",
         "CHANNEL": {
@@ -507,11 +507,11 @@
       },
       "DETAILS": {
         "TITLE": "Detajet e Postës",
-        "DESC": "Zgjidhni nga lista më poshtë faqen e Facebook që dëshironi të lidhni me Chatwoot. Mund t’i vendosni edhe një emër të personalizuar inbox-it për identifikim më të lehtë."
+        "DESC": "Zgjidhni nga lista më poshtë faqen e Facebook që dëshironi të lidhni me Fillnode. Mund t’i vendosni edhe një emër të personalizuar inbox-it për identifikim më të lehtë."
       },
       "FINISH": {
         "TITLE": "E arritëm!",
-        "DESC": "Keni përfunduar me sukses integrimin e Faqes suaj në Facebook me Chatwoot. Herën tjetër kur një klient t’ju shkruajë në Faqen tuaj, biseda do të shfaqet automatikisht në inbox-in tuaj.<br>Gjithashtu, po ju ofrojmë një skriptë widget-i që mund ta shtoni lehtësisht në faqen tuaj. Pasi të jetë aktive në faqen tuaj, klientët mund t’ju shkruajnë direkt nga faqja juaj pa ndihmën e ndonjë mjeti të jashtëm dhe biseda do të shfaqet këtu, në Chatwoot.<br>Kul, apo jo? Ne përpiqemi të jemi :)"
+        "DESC": "Keni përfunduar me sukses integrimin e Faqes suaj në Facebook me Fillnode. Herën tjetër kur një klient t’ju shkruajë në Faqen tuaj, biseda do të shfaqet automatikisht në inbox-in tuaj.<br>Gjithashtu, po ju ofrojmë një skriptë widget-i që mund ta shtoni lehtësisht në faqen tuaj. Pasi të jetë aktive në faqen tuaj, klientët mund t’ju shkruajnë direkt nga faqja juaj pa ndihmën e ndonjë mjeti të jashtëm dhe biseda do të shfaqet këtu, në Fillnode.<br>Kul, apo jo? Ne përpiqemi të jemi :)"
       },
       "EMAIL_PROVIDER": {
         "TITLE": "Select your email provider",
@@ -1123,8 +1123,8 @@
         "USER_MESSAGE": "Përshëndetje",
         "AGENT_MESSAGE": "Përshëndetje"
       },
-      "BRANDING_TEXT": "Powered by Chatwoot",
-      "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
+      "BRANDING_TEXT": "Powered by Fillnode",
+      "SCRIPT_SETTINGS": "\n      window.fillnodeSettings = {options};"
     },
     "EMAIL_PROVIDERS": {
       "MICROSOFT": {

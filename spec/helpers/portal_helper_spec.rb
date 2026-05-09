@@ -235,10 +235,10 @@ describe PortalHelper do
   describe '#render_category_content' do
     let(:markdown_content) { 'This is a *test* markdown content' }
     let(:plain_text_content) { 'This is a test markdown content' }
-    let(:renderer) { instance_double(ChatwootMarkdownRenderer) }
+    let(:renderer) { instance_double(FillnodeMarkdownRenderer) }
 
     before do
-      allow(ChatwootMarkdownRenderer).to receive(:new).with(markdown_content).and_return(renderer)
+      allow(FillnodeMarkdownRenderer).to receive(:new).with(markdown_content).and_return(renderer)
       allow(renderer).to receive(:render_markdown_to_plain_text).and_return(plain_text_content)
     end
 
@@ -260,8 +260,8 @@ describe PortalHelper do
   end
 
   describe '#set_og_image_url' do
-    let(:portal_name) { 'Chatwoot Portal' }
-    let(:title) { 'Welcome to Chatwoot' }
+    let(:portal_name) { 'Fillnode Portal' }
+    let(:title) { 'Welcome to Fillnode' }
 
     context 'when CDN URL is present' do
       before do
@@ -294,24 +294,24 @@ describe PortalHelper do
 
   describe '#generate_portal_brand_url' do
     it 'builds URL with UTM params and referer host as source (happy path)' do
-      result = helper.generate_portal_brand_url('https://brand.example.com', 'https://app.chatwoot.com/some/page')
+      result = helper.generate_portal_brand_url('https://brand.example.com', 'https://app.fillnode.com/some/page')
       uri = URI.parse(result)
       params = Rack::Utils.parse_query(uri.query)
       expect(uri.scheme).to eq('https')
       expect(uri.host).to eq('brand.example.com')
       expect(params['utm_medium']).to eq('helpcenter')
       expect(params['utm_campaign']).to eq('branding')
-      expect(params['utm_source']).to eq('app.chatwoot.com')
+      expect(params['utm_source']).to eq('app.fillnode.com')
     end
 
     it 'returns utm string when brand_url is nil or empty' do
       expect(helper.generate_portal_brand_url(nil,
-                                              'https://app.chatwoot.com')).to eq(
-                                                '?utm_campaign=branding&utm_medium=helpcenter&utm_source=app.chatwoot.com'
+                                              'https://app.fillnode.com')).to eq(
+                                                '?utm_campaign=branding&utm_medium=helpcenter&utm_source=app.fillnode.com'
                                               )
       expect(helper.generate_portal_brand_url('',
-                                              'https://app.chatwoot.com')).to eq(
-                                                '?utm_campaign=branding&utm_medium=helpcenter&utm_source=app.chatwoot.com'
+                                              'https://app.fillnode.com')).to eq(
+                                                '?utm_campaign=branding&utm_medium=helpcenter&utm_source=app.fillnode.com'
                                               )
     end
 

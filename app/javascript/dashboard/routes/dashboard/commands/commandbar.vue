@@ -1,5 +1,5 @@
 <script setup>
-import '@chatwoot/ninja-keys';
+import '@fillnode/ninja-keys';
 import { ref, computed, watchEffect, onMounted } from 'vue';
 import { useStore } from 'dashboard/composables/store';
 import { useTrack } from 'dashboard/composables';

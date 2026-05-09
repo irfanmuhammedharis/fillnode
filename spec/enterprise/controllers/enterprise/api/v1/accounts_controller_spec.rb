@@ -123,7 +123,7 @@ RSpec.describe 'Enterprise Billing APIs', type: :request do
     context 'when it is an authenticated user' do
       before do
         InstallationConfig.where(name: 'DEPLOYMENT_ENV').first_or_create(value: 'cloud')
-        InstallationConfig.where(name: 'CHATWOOT_CLOUD_PLANS').first_or_create(value: [{ 'name': 'Hacker' }])
+        InstallationConfig.where(name: 'FILLNODE_CLOUD_PLANS').first_or_create(value: [{ 'name': 'Hacker' }])
       end
 
       context 'when it is an agent' do
@@ -159,7 +159,7 @@ RSpec.describe 'Enterprise Billing APIs', type: :request do
           create(:conversation, account: account)
           create(:channel_api, account: account)
           InstallationConfig.where(name: 'DEPLOYMENT_ENV').first_or_create(value: 'cloud')
-          InstallationConfig.where(name: 'CHATWOOT_CLOUD_PLANS').first_or_create(value: [{ 'name': 'Hacker' }])
+          InstallationConfig.where(name: 'FILLNODE_CLOUD_PLANS').first_or_create(value: [{ 'name': 'Hacker' }])
         end
 
         it 'returns the limits if the plan is default' do
@@ -205,8 +205,8 @@ RSpec.describe 'Enterprise Billing APIs', type: :request do
               },
               'conversation' => {},
               'captain' => {
-                'documents' => { 'consumed' => 0, 'current_available' => ChatwootApp.max_limit, 'total_count' => ChatwootApp.max_limit },
-                'responses' => { 'consumed' => 0, 'current_available' => ChatwootApp.max_limit, 'total_count' => ChatwootApp.max_limit }
+                'documents' => { 'consumed' => 0, 'current_available' => FillnodeApp.max_limit, 'total_count' => FillnodeApp.max_limit },
+                'responses' => { 'consumed' => 0, 'current_available' => FillnodeApp.max_limit, 'total_count' => FillnodeApp.max_limit }
               },
               'non_web_inboxes' => {}
             }
@@ -252,7 +252,7 @@ RSpec.describe 'Enterprise Billing APIs', type: :request do
     let(:stripe_invoice) { Struct.new(:id).new('inv_test123') }
 
     before do
-      create(:installation_config, name: 'CHATWOOT_CLOUD_PLANS', value: [
+      create(:installation_config, name: 'FILLNODE_CLOUD_PLANS', value: [
                { 'name' => 'Hacker', 'product_id' => ['prod_hacker'], 'price_ids' => ['price_hacker'] },
                { 'name' => 'Business', 'product_id' => ['prod_business'], 'price_ids' => ['price_business'] }
              ])

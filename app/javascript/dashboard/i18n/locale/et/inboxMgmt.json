@@ -16,7 +16,7 @@
     "CREATE_FLOW": {
       "CHANNEL": {
         "TITLE": "Vali kanal",
-        "BODY": "Valige teenusepakkuja, mille soovite Chatwootiga siduda."
+        "BODY": "Valige teenusepakkuja, mille soovite Fillnodeiga siduda."
       },
       "INBOX": {
         "TITLE": "Loo postkast",
@@ -42,7 +42,7 @@
         "PLACEHOLDER": "Sisesta oma veebisaidi nimi (nt Acme Inc)"
       },
       "FB": {
-        "HELP": "PS: Sisselogimisel pääseme ligi ainult teie lehe sõnumitele. Teie privaatseid sõnumeid Chatwoot ei pääse kunagi ligi.",
+        "HELP": "PS: Sisselogimisel pääseme ligi ainult teie lehe sõnumitele. Teie privaatseid sõnumeid Fillnode ei pääse kunagi ligi.",
         "CHOOSE_PAGE": "Vali leht",
         "CHOOSE_PLACEHOLDER": "Valige nimekirjast leht",
         "INBOX_NAME": "Postkasti nimi",
@@ -449,7 +449,7 @@
       },
       "AUTH": {
         "TITLE": "Vali kanal",
-        "DESC": "Chatwoot toetab vestlusvidinaid, Facebook Messengeri, WhatsAppi, e-kirju jms kanalitena. Kui soovid luua kohandatud kanali, saad selle luua API kanali abil. Alustamiseks vali allolevatest kanalitest üks.",
+        "DESC": "Fillnode toetab vestlusvidinaid, Facebook Messengeri, WhatsAppi, e-kirju jms kanalitena. Kui soovid luua kohandatud kanali, saad selle luua API kanali abil. Alustamiseks vali allolevatest kanalitest üks.",
         "TITLE_NEXT": "Complete the setup",
         "TITLE_FINISH": "Voilà!",
         "CHANNEL": {
@@ -507,11 +507,11 @@
       },
       "DETAILS": {
         "TITLE": "Postkasti üksikasjad",
-        "DESC": "Valige allolevast rippmenüüst Facebooki leht, mida soovite Chatwootiga ühendada. Võite ka anda postkastile kohandatud nime parema äratundmise jaoks."
+        "DESC": "Valige allolevast rippmenüüst Facebooki leht, mida soovite Fillnodeiga ühendada. Võite ka anda postkastile kohandatud nime parema äratundmise jaoks."
       },
       "FINISH": {
         "TITLE": "Valmis!",
-        "DESC": "Olete edukalt ühendanud oma Facebooki lehe Chatwootiga. Järgmine kord, kui klient teie lehele sõnumi saadab, kuvatakse vestlus automaatselt teie postkastis.<br>Samuti anname teile vidina skripti, mille saate hõlpsasti oma veebisaidile lisada. Kui see on teie veebisaidil aktiivne, saavad kliendid teile otse veebisaidilt sõnumeid saata ilma väliste tööriistadeta ning vestlus kuvatakse siin, Chatwootis.<br>Lahe, eks? Me püüame kindlasti :)"
+        "DESC": "Olete edukalt ühendanud oma Facebooki lehe Fillnodeiga. Järgmine kord, kui klient teie lehele sõnumi saadab, kuvatakse vestlus automaatselt teie postkastis.<br>Samuti anname teile vidina skripti, mille saate hõlpsasti oma veebisaidile lisada. Kui see on teie veebisaidil aktiivne, saavad kliendid teile otse veebisaidilt sõnumeid saata ilma väliste tööriistadeta ning vestlus kuvatakse siin, Fillnodeis.<br>Lahe, eks? Me püüame kindlasti :)"
       },
       "EMAIL_PROVIDER": {
         "TITLE": "Valige oma e-posti teenusepakkuja",
@@ -1123,8 +1123,8 @@
         "USER_MESSAGE": "Tere",
         "AGENT_MESSAGE": "Tere"
       },
-      "BRANDING_TEXT": "Toetab Chatwoot’i",
-      "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
+      "BRANDING_TEXT": "Toetab Fillnode’i",
+      "SCRIPT_SETTINGS": "\n      window.fillnodeSettings = {options};"
     },
     "EMAIL_PROVIDERS": {
       "MICROSOFT": {

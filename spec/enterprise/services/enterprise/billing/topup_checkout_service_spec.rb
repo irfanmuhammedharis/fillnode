@@ -10,7 +10,7 @@ describe Enterprise::Billing::TopupCheckoutService do
   let(:stripe_invoice) { Struct.new(:id).new('inv_test123') }
 
   before do
-    create(:installation_config, name: 'CHATWOOT_CLOUD_PLANS', value: [
+    create(:installation_config, name: 'FILLNODE_CLOUD_PLANS', value: [
              { 'name' => 'Hacker', 'product_id' => ['prod_hacker'], 'price_ids' => ['price_hacker'] },
              { 'name' => 'Business', 'product_id' => ['prod_business'], 'price_ids' => ['price_business'] }
            ])
