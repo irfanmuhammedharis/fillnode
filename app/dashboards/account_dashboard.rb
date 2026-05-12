@@ -34,7 +34,8 @@ class AccountDashboard < Administrate::BaseDashboard
     locale: Field::Select.with_options(collection: LANGUAGES_CONFIG.map { |_x, y| y[:iso_639_1_code] }),
     status: Field::Select.with_options(collection: [%w[Active active], %w[Suspended suspended]]),
     account_users: Field::HasMany,
-    custom_attributes: Field::String
+    custom_attributes: Field::String,
+    limits: Field::String
   }.merge(enterprise_attribute_types).freeze
 
   # COLLECTION_ATTRIBUTES
@@ -54,7 +55,7 @@ class AccountDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   enterprise_show_page_attributes = if FillnodeApp.enterprise?
-                                      attrs = %i[custom_attributes limits]
+                                      attrs = %i[custom_attributes]
                                       attrs << :manually_managed_features if FillnodeApp.fillnode_cloud?
                                       attrs << :all_features
                                       attrs
@@ -70,13 +71,14 @@ class AccountDashboard < Administrate::BaseDashboard
     status
     conversations
     account_users
+    limits
   ] + enterprise_show_page_attributes).freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   enterprise_form_attributes = if FillnodeApp.enterprise?
-                                 attrs = %i[limits]
+                                 attrs = %i[]
                                  attrs << :manually_managed_features if FillnodeApp.fillnode_cloud?
                                  attrs << :all_features
                                  attrs
@@ -87,6 +89,7 @@ class AccountDashboard < Administrate::BaseDashboard
     name
     locale
     status
+    limits
   ] + enterprise_form_attributes).freeze
 
   # COLLECTION_FILTERS
