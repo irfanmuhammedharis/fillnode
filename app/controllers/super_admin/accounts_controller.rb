@@ -28,6 +28,14 @@ class SuperAdmin::AccountsController < SuperAdmin::ApplicationController
   #   end
   # end
 
+  def scoped_resource
+    resource_class.select(
+      'accounts.*',
+      '(SELECT COUNT(*) FROM account_users WHERE account_users.account_id = accounts.id) AS users_count',
+      '(SELECT COUNT(*) FROM conversations WHERE conversations.account_id = accounts.id) AS conversations_count'
+    )
+  end
+
   # Override `resource_params` if you want to transform the submitted
   # data before it's persisted. For example, the following would turn all
   # empty values into nil values. It uses other APIs such as `resource_class`
@@ -35,7 +43,8 @@ class SuperAdmin::AccountsController < SuperAdmin::ApplicationController
   #
   def resource_params
     permitted_params = super
-    permitted_params[:limits] = permitted_params[:limits].to_h.slice('agents', 'inboxes').compact
+    limits = params.dig(:account, :limits)
+    permitted_params[:limits] = limits.permit(:agents, :inboxes).to_h.slice('agents', 'inboxes').compact_blank if limits.respond_to?(:permit)
     permitted_params[:selected_feature_flags] = params[:enabled_features].keys.map(&:to_sym) if params[:enabled_features].present?
     permitted_params
   end

@@ -63,7 +63,8 @@ and renders all form fields for a resource's editable attributes.
     <div class="field-unit__field">
       <%= f.number_field :"limits[agents]",
           value: page.resource.limits&.dig("agents"),
-          min: 0 %>
+          min: 0,
+          name: "account[limits][agents]" %>
     </div>
   </fieldset>
 
@@ -74,7 +75,8 @@ and renders all form fields for a resource's editable attributes.
     <div class="field-unit__field">
       <%= f.number_field :"limits[inboxes]",
           value: page.resource.limits&.dig("inboxes"),
-          min: 0 %>
+          min: 0,
+          name: "account[limits][inboxes]" %>
     </div>
   </fieldset>
 

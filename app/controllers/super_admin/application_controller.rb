@@ -9,9 +9,13 @@ class SuperAdmin::ApplicationController < Administrate::ApplicationController
   include ActionView::Context
   include SuperAdmin::NavigationHelper
 
-  helper_method :render_vue_component, :settings_open?, :settings_pages
+  helper_method :render_vue_component, :settings_open?, :settings_pages, :application_title
   # authenticiation done via devise : SuperAdmin Model
   before_action :authenticate_super_admin!
+
+  def application_title
+    'FillNode'
+  end
 
   # Override this value to specify the number of elements to display at a time
   # on index pages. Defaults to 20.

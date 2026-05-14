@@ -53,7 +53,10 @@ class SuperAdmin::UsersController < SuperAdmin::ApplicationController
   end
 
   def scoped_resource
-    resource_class.with_attached_avatar
+    resource_class.with_attached_avatar.select(
+      'users.*',
+      '(SELECT COUNT(*) FROM account_users WHERE account_users.user_id = users.id) AS accounts_count'
+    )
   end
 
   def resource_params
